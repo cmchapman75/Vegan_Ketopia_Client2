@@ -1,0 +1,58 @@
+
+
+.recipeSection {
+    text-align: center;
+}
+
+.individual-recipe {
+   
+    list-style: none;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+}
+
+/* .individual-recipe:hover {
+    
+} */
+
+#recipeHeader {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'cookiesregular';
+}
+
+#recipe-search-text {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+#no-recipes-in-list {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#larger-search-text {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#searchBar {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.empty-fields-error-message {
+    text-align: center;
+    
+}
+
+/* .recipeResults {
+    text-align: center;
+} */

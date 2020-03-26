@@ -1,0 +1,52 @@
+.field__input {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+.Creation {
+    
+    border: black solid 2px;
+    margin: 5%;
+    padding: 2.5%;
+    
+    border-radius: 2%;
+}
+
+.a-field {
+    padding: 2.5%;
+    font-size: 20px;
+    margin: 2%;
+}
+
+form {
+    margin-top: 15px;
+}
+
+.Creation-Header {
+    font-family: 'cookiesregular';
+    text-align: center;
+    font-size: 25px;
+}
+
+textarea {
+    margin-bottom: 2.5%
+}
+
+.inputParam {
+    display: inline;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.instructionsField {
+    min-height: 150px;
+}
+
+.empty-fields-error-message {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+   
+}

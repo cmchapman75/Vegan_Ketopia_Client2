@@ -1,0 +1,31 @@
+
+    h1 {
+    font-family: 'cookiesregular';
+  
+  }
+  
+  #header-nav-container {
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .heading{
+    text-decoration: none;
+    border: 3px solid black;
+  }
+  
+  /* .log-out-user-link{
+    margin-left: -400px;
+  } */
+  
+  #site-sections-box-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav-link-text {
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  

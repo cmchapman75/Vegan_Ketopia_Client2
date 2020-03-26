@@ -1,0 +1,42 @@
+
+
+/*
+ #F8FFCA Yellow Green
+ #B6D084 Chartreuse
+ #FFCB32 Mimosa
+ #2F7604 Green
+ #141514 Black
+ */
+
+.recipePageHeader {
+    font-size: 30px;
+    font-family: 'cookiesregular';
+}
+
+.recipeInfo {
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 5%;
+}
+
+#recipeView {
+    border: black solid 2px;
+    margin: 5%;
+    padding: 2.5%;
+    border-radius: 2%;
+}
+
+.buttonGroup {
+    text-align: center;
+}
+
+.a-field {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 720px) {
+    .instructions {
+        font-size: 16px;
+    }
+}

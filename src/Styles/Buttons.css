@@ -1,0 +1,1620 @@
+/* @media screen and (min-width: 1px) {
+    .submitCreate:hover {
+      background-color: black;
+    }
+    .submitCreateRecipe:hover {
+      background-color: black;
+    }
+    .cancel-view:hover {
+      background-color: black;
+    }
+    .noRecipeGoHome:hover {
+      background-color: black;
+    }
+    .cancelEditRecipe:hover {
+      background-color: black;
+    }
+  
+    .submitRecipeEdit:hover {
+      background-color: black;
+    }
+  
+    .delete-recipe-button:hover {
+      background-color: black;
+    }
+  
+    .editRecipe:hover {
+      background-color: black;
+    }
+  
+    .login:hover {
+      background-color: black;
+    }
+  
+    .create-account:hover {
+      background-color: black;
+    }
+  
+    .newAccount:hover {
+      background-color: black;
+    }
+  
+    .submitLogin:hover {
+      background-color: black;
+    }
+  }
+  @media screen and (min-width: 319px) {
+    .noRecipeGoHome {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .submitCreate {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .newAccount {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitLogin {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-new-recipe {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 8%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .user-name {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      justify-content: flex-start;
+      border: black solid 2px;
+      color: rgb(40, 158, 14);
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .logout-button {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 8%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .editRecipe {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 8%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .delete-recipe-button {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 8%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitRecipeEdit {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 8%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancel-view {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 8%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancelEditRecipe {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 8%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitCreateRecipe {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .login {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-account {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .Creation-Form {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropbtn {
+      background: var(--alt-bg);
+      width: 150px;
+      height: 50px;
+      font-size: smaller;
+      text-decoration: none;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropdown {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      justify-content: flex-start;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      margin-left: 20px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .field__input {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      border: black solid 2px;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .ownerSelectors {
+      align-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (min-width: 359px) {
+    .noRecipeGoHome {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .newAccount {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitLogin {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-new-recipe {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .user-name {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .logout-button {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .editRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .delete-recipe-button {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitRecipeEdit {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancel-view {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancelEditRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitCreateRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .login {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-account {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .Creation-Form {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropbtn {
+      background: var(--alt-bg);
+      width: 150px;
+      height: 50px;
+      font-size: smaller;
+      text-decoration: none;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropdown {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      margin-left: 20px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .field__input {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      border: black solid 2px;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .ownerSelectors {
+      align-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (min-width: 478px) {
+    .noRecipeGoHome {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .newAccount {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitLogin {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-new-recipe {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .user-name {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .logout-button {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .editRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      border: black solid 2px;
+      transition: all 0.15s;
+    }
+  
+    .delete-recipe-button {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitRecipeEdit {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancel-view {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancelEditRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitCreateRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .login {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-account {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .Creation-Form {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropbtn {
+      background: var(--alt-bg);
+      width: 150px;
+      height: 50px;
+      font-size: smaller;
+      text-decoration: none;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropdown {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      margin-left: 20px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .field__input {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      border: black solid 2px;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .ownerSelectors {
+      align-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (min-width: 767px) {
+    .noRecipeGoHome {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .newAccount {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitLogin {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-new-recipe {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .user-name {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .logout-button {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .editRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .delete-recipe-button {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitRecipeEdit {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancel-view {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancelEditRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitCreateRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .login {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-account {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .Creation-Form {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropbtn {
+      background: var(--alt-bg);
+      width: 150px;
+      height: 50px;
+      font-size: smaller;
+      text-decoration: none;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropdown {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      margin-left: 20px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .field__input {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .ownerSelectors {
+      align-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (min-width: 1023px) {
+    .noRecipeGoHome {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .newAccount {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitLogin {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-new-recipe {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .user-name {
+      align-items: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 30%;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .logout-button {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .editRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .delete-recipe-button {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitRecipeEdit {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancel-view {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .cancelEditRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .submitCreateRecipe {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .login {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .create-account {
+      align-self: center;
+      text-align: center;
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .Creation-Form {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropbtn {
+      background: var(--alt-bg);
+      width: 150px;
+      height: 50px;
+      font-size: smaller;
+      text-decoration: none;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .dropdown {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: 200px;
+      margin-left: 20px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .field__input {
+      background: var(--alt-bg);
+      display: flex;
+      width: 150px;
+      height: 50px;
+      flex-direction: column;
+      font-size: smaller;
+      text-decoration: none;
+      box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+      margin-right: 200px;
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+  
+    .ownerSelectors {
+      align-content: center;
+      text-align: center;
+    }
+  }
+   */

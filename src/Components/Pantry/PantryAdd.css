@@ -1,0 +1,223 @@
+/* PantryRoute.js */
+
+  /*
+   #F8FFCA Yellow Green
+   #B6D084 Chartreuse
+   #FFCB32 Mimosa
+   #2F7604 Green
+   #141514 Black
+   */
+  
+  #my-pantry-header {
+    font-size: 40px;
+    font-family: 'cookiesregular';
+  }
+  
+  #pantry-router-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  #ingredients-container {
+  
+    /* align-items: flex-start; */
+    /* border: 2px solid black; */
+    width: 280px;
+    margin: 2.5%;
+    border-radius: 10%;
+    padding: 2.5%;
+  }
+  
+  .ingredientNameContainer{
+  width: 125px;
+  display: flex;
+  font-size: 13px;
+  flex-direction: row;
+  justify-content: flex-start;
+  }
+  
+  #ingredient-name, #notes {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  
+  .ingredient-name {
+    font-size:5vw;
+    /* margin-right: 9px; */
+  }
+  
+  .ingredientInfoContainer {
+    min-width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .individual-ingredients {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 1%;
+    border-bottom: black solid 1px;
+  }
+  
+  
+  .ingredient-stock {
+    /* display: inline; */
+    margin-left: 5%;
+    margin-top: 10%;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 5px;
+  }
+  
+  #pantry-text {
+    padding:15px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  .no-ingredients-message {
+    text-align: center;
+  }
+  
+  #no-ingredients-bold {
+    font-weight: bold;
+  }
+  
+  /* AddIngredient.js */
+  
+  #modal {
+    /* border: 3px solid black; */
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+  
+  #ingredient-in-stock {
+    margin-top: 1px;
+    margin-bottom: 7px;
+    margin-left: -8px;
+  }
+  
+  #close {
+    font-size: 16px;
+  }
+  
+  .inventory-dropdown-text {
+    margin-left: 65px;
+  }
+  
+  #in-stock {
+    
+    color: black;
+    font-weight:normal;
+    width: 205px;
+    text-align: center;
+    margin-left: 6px;
+    font-size: 18px;
+  }
+  
+  
+  
+  
+  /* IndividualIngredient.js */
+  
+  #original-ingredient-data {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  
+  #individual-ingredient-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #ingredient-detail-page-container {
+    text-align: center;
+  }
+  
+  #modal-content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 305px;
+    font-weight: bold;
+    border: black solid 2px;
+    border-radius: 10%;
+    margin: -50px
+  }
+  
+  /* #update-ingredient-button {
+  
+  } */
+  
+  #delete-ingredient-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #delete-ingredient-button, #update-ingredient-button, #go-back-button {
+    font-size: 16px;
+  }
+  
+  /* Modal.js */
+  
+  /* .modal-container {
+    background-color: #2F7604;
+  } */
+  
+  .styled-modal-div {
+    background-color: transparent;
+  }
+  
+  
+  #ingredient-search-field {
+    height: 25px;
+    font-size: 20px;
+    width: 280px;
+    margin-top: 1.5%;
+  }
+  
+  .modalInput {
+    height: 25px;
+    width: 200px;
+    font-size: 20px;
+  }
+  
+  .pantrySearch {
+    text-align: center;
+    width: 100%;
+    margin: 2.5%;
+  }
+  
+  @media only screen and (min-width: 350px) {
+    .ingredient-name {
+      font-size:4vw;
+    }
+  }
+  
+  @media only screen and (min-width: 480px) {
+    #ingredients-container {
+   
+    /* align-items: flex-start; */
+    /* border: 2px solid black; */
+    min-width: 310px;
+    margin: 2.5%;
+    border-radius: 10%;
+    
+    padding: 2.5%;
+    }
+    .ingredient-name {
+      font-size:1.5em;
+    }
+  }

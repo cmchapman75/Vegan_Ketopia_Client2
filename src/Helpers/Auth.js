@@ -3,7 +3,7 @@ import TokenService from './Token'
 
 const AuthHelper = {
   createAccount(newAccount) {
-    return fetch(`${config.API_ENDPOINT}/accounts`, {
+    return fetch(`${config.API_ENDPOINT}/users`, {
       method: "POST",
       headers: {
         "content-type": "application/json"
@@ -14,8 +14,8 @@ const AuthHelper = {
         !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
       );
   },
-  deleteAccount(user_name) {
-    return fetch(`${config.API_ENDPOINT}/accounts/${user_name}`, {
+  deleteAccount(username) {
+    return fetch(`${config.API_ENDPOINT}/users/${username}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
@@ -24,7 +24,7 @@ const AuthHelper = {
     });
   },
   getCurrentUser(token) {
-    return fetch(`${config.API_ENDPOINT}/accounts`, {
+    return fetch(`${config.API_ENDPOINT}/users`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -36,8 +36,8 @@ const AuthHelper = {
         return data.dbUser;
       });
   },
-  getPublicAccountData(user_name) {
-    return fetch(`${config.API_ENDPOINT}/accounts/${user_name}`, {
+  getPublicAccountData(username) {
+    return fetch(`${config.API_ENDPOINT}/users/${username}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

@@ -21,8 +21,8 @@ export default class RecipeAdd extends React.Component {
   state = { error: null };
 
   handleChange(event) {
-    this.setState({value:
-      event.target.value});
+    // this.setState({value:
+    //   event.target.value});
   }
 
   createSubmit = e => {

@@ -1,3 +1,48 @@
+# Vegan Ketopia:
+
+    Vegan Ketopia is a best friend in the kitchen.
+     
+
+
+## Contributors:
+
+
+- Christina Chapman
+
+
+## Visit Kitchen Helper:
+
+  * [Client Side Repo]()
+
+  * [Live App]()
+  
+  
+## Screenshots:
+
+   ![Landing Logo](src/Assets/Landing.gif)
+
+   ![Home Page](src/Assets/Dashboard.gif)
+
+   ![Pantry Landing Page](src/Assets/Pantry.gif)   
+
+   ![Recipe Landing Page](src/Assets/Recipes.gif)
+
+   ![Recipe Detail Page](src/Assets/RecipeDetail.gif)
+   
+
+
+
+
+## Technologies:
+
+**Front End Tech:** HTML, CSS, JavaScript, React, Modal, Widgets(Dark Mode)
+
+**Back End Tech:** NodeJs, ExpressJs, PostgreSQL
+
+**Testing Tech:** Jest, Snapshot, Enzyme, Lodash, Mocha, Chai
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

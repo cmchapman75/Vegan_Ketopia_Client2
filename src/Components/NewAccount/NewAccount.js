@@ -110,7 +110,7 @@ class NewAccount extends Component {
                         <button className="medButton" id="create-button">Create</button>
                         <br />
                         <Link to="/Login">
-                            <button className="medButton">Have an account?</button>
+                            <button className="medButton">Already a Ketopian?</button>
                         </Link>                    
                     
                     </div>  

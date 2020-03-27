@@ -21,9 +21,8 @@ export default class RecipeAdd extends React.Component {
   state = { error: null };
 
   handleChange(event) {
-    this.setState({
-
-    })
+    this.setState({value:
+      event.target.value});
   }
 
   createSubmit = e => {
@@ -32,7 +31,7 @@ export default class RecipeAdd extends React.Component {
       title,
       instructions,
       ingredients,
-    } = this state;
+    } = this.state;
 
     
 

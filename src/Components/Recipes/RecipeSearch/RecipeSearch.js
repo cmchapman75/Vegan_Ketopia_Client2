@@ -15,7 +15,7 @@ export default class SearchRecipe extends React.Component {
     event.preventDefault();
     let searchArray = this.state.searchTerms.split(' ')
     let searchTerms = searchArray.join(',+')
-    let URL = ``
+    let URL = `http://localhost:8000/recipes/findByIngredient?ingredients=${searchTerms}`;
 
     fetch(URL)
       .then(res => {

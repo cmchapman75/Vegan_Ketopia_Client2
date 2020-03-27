@@ -4,7 +4,7 @@ import Recipe from "../../../Helpers/Recipe";
 import './RecipeAdd.css'
 
 
-export default class CreateRecipe extends React.Component {
+export default class RecipeAdd extends React.Component {
   static defaultProps = {
     currentUser: {},
     location: {},
@@ -20,21 +20,29 @@ export default class CreateRecipe extends React.Component {
 
   state = { error: null };
 
+  handleChange(event) {
+    this.setState({
+
+    })
+  }
+
   createSubmit = e => {
     e.preventDefault();
     const {
       title,
       instructions,
       ingredients,
-    } = e.target;
+    } = this state;
+
+    
 
     this.setState({ error: null });
     let recipeIngredients = ingredients.value.split(', ');
 
     Recipe.createRecipe({
       title: title.value,
-      recipe_description: instructions.value.split('. '),
-      recipe_ingredients: recipeIngredients,
+      instructions: instructions.value.split('. '),
+      ingredients: recipeIngredients,
     })
       .then(res => {
         if (!res.ok) { this.setState({ error: !res.ok }) }
@@ -68,6 +76,7 @@ export default class CreateRecipe extends React.Component {
               required
               name="title"
               placeholder="Title"
+              onChange = {this.handleChange}
             />
             <span className="a-field__label-wrap"><span className="a-field__label"></span></span>
           </label>
@@ -80,6 +89,7 @@ export default class CreateRecipe extends React.Component {
               maxLength="60"
               name="recipe_ingredients"
               placeholder="Recipe ingredients"
+              onChange = {this.handleChange}
             />
             <span className="a-field__label-wrap">
               <span className="a-field__label"></span>
@@ -93,6 +103,7 @@ export default class CreateRecipe extends React.Component {
               maxLength="300"
               name="recipe_description"
               placeholder="Recipe description"
+              onChange = {this.handleChange}
             ></textarea>
             <span className="a-field__label-wrap">
               <span className="a-field__label"></span>

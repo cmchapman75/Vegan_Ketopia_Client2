@@ -2,20 +2,24 @@ import config from "../config";
 import TokenService from './Token'
 
 const AuthHelper = {
-  createAccount(newAccount) {
-    return fetch(`${config.API_ENDPOINT}/user`, {
-      method: "POST",
+  createUser(newUser) {
+    console.log(config);
+    return fetch(`${config.API_ENDPOINT}/api/user`, {
+      method: 'POST',
       headers: {
-        "content-type": "application/json"
+        'content-type': 'application/json',
       },
-      body: JSON.stringify(newAccount)
+      body: JSON.stringify(newUser),
     })
       .then(res =>
-        !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
-      );
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
   },
+
   deleteAccount(username) {
-    return fetch(`${config.API_ENDPOINT}/user/${username}`, {
+    return fetch(`${config.API_ENDPOINT}/api/user/${username}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
@@ -24,7 +28,7 @@ const AuthHelper = {
     });
   },
   getCurrentUser(token) {
-    return fetch(`${config.API_ENDPOINT}/user`, {
+    return fetch(`${config.API_ENDPOINT}/api/user`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -37,7 +41,7 @@ const AuthHelper = {
       });
   },
   getPublicAccountData(username) {
-    return fetch(`${config.API_ENDPOINT}/user/${username}`, {
+    return fetch(`${config.API_ENDPOINT}/api/user/${username}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -50,7 +54,7 @@ const AuthHelper = {
       });
   },
   login(credentials) {
-    return fetch(`${config.API_ENDPOINT}/auth/login`, {
+    return fetch(`${config.API_ENDPOINT}/api/auth/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -64,7 +68,7 @@ const AuthHelper = {
   },
   refreshToken() {
     console.trace('refreshToken spam?');
-    return fetch(`${config.API_ENDPOINT}/auth/token`, {
+    return fetch(`${config.API_ENDPOINT}/api/auth/token`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${TokenService.getAuthToken()}`

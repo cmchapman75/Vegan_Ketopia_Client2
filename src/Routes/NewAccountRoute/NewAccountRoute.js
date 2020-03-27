@@ -130,7 +130,7 @@ class NewAccountRoute extends Component {
         <div className="new-account-form">
          <section>
             <p>
-            Join us in the cruelty free kitchen!
+            Join us in the cruelty free keto kitchen!
             </p>
             <h2>Sign up</h2>
             <NewAccount

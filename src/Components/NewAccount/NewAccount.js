@@ -6,29 +6,29 @@ import AuthHelper from "../../Helpers/Auth";
 import "./NewAccount.css";
 
 class NewAccount extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state ={
-    //         error: null,
-    //         password: '',
-    //         username: '',
-    //         emailAddress: ''
-    //     }
+    constructor(props) {
+        super(props);
+        this.state ={
+            error: null,
+            password: '',
+            username: '',
+            emailAddress: ''
+        }
     
-    //     this.handleChange = this.handleChange.bind(this);
-    //     this.createSubmit = this.createSubmit.bind(this);
-    //   }
-    static defaultProps = {
-        location: {},
-        history: {
-            push: () => { }
-        },        
-    };
+        this.handleChange = this.handleChange.bind(this);
+        this.createSubmit = this.createSubmit.bind(this);
+      }
+    // static defaultProps = {
+    //     location: {},
+    //     history: {
+    //         push: () => { }
+    //     },        
+    // };
     
     state = { error: null};
-    // handleChange(event) {
-    //     this.setState({[event.target.name]: event.target.value});
-    // }
+    handleChange(event) {
+        this.setState({[event.target.name]: event.target.value});
+    }
 
     handleCreationSuccess = () => {
         const { history } = this.props;
@@ -45,9 +45,9 @@ class NewAccount extends Component {
         this.setState({ error: null });
 
         AuthHelper.createUser({
-            username: username,
-            emailAddress: emailAddress,
-            password: password
+            username: username.value,
+            emailAddress: emailAddress.value,
+            password: password.value
         })
         .then(user => {
             username.value = "";
@@ -80,7 +80,7 @@ class NewAccount extends Component {
                         required
                         name="username"
                         value={this.state.username}
-                        // onChange={e => this.handleChange(e)}
+                        onChange={e => this.handleChange(e)}
                         // placeholder="Username"
                     />
                     <label className="field-label">
@@ -91,7 +91,7 @@ class NewAccount extends Component {
                         required
                         name="emailAddress"
                         value={this.state.emailAddress}
-                        // onChange={e => this.handleChange(e)}
+                        onChange={e => this.handleChange(e)}
                         // placeholder="Email Address"
                     />  
                     <label className="field-label">
@@ -102,7 +102,7 @@ class NewAccount extends Component {
                         required
                         name="password"
                         value={this.state.password}
-                        // onChange={e => this.handleChange(e)}
+                        onChange={e => this.handleChange(e)}
                         // placeholder="Password"
                     />  
                     <div className="button-con">

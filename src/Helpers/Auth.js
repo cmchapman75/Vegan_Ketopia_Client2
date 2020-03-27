@@ -3,7 +3,7 @@ import TokenService from './Token'
 
 const AuthHelper = {
   createUser(newUser) {
-    console.log(config);
+    console.log(newUser);
     return fetch(`${config.API_ENDPOINT}/api/users`, {
       method: 'POST',
       headers: {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import AuthHelper from "../../Helpers/Auth";
 
@@ -18,12 +18,7 @@ class NewAccount extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.createSubmit = this.createSubmit.bind(this);
       }
-    // static defaultProps = {
-    //     location: {},
-    //     history: {
-    //         push: () => { }
-    //     },        
-    // };
+   
     
     state = { error: null};
     handleChange(event) {
@@ -48,16 +43,18 @@ class NewAccount extends Component {
             username: username.value,
             email_address: email_address.value,
             password: password.value
-        })
-        .then(user => {
-            username.value = "";
-            email_address.value = "";
-            password.value = "";
-            this.handleCreationSuccess();
-        })
-        .catch(res => {
-            this.setState({ error: res.error });
-        });
+          })
+            .then(user => {
+              console.log("AWDOIAJWD");
+              username.value = "";
+              email_address.value = "";
+              password.value = "";
+              this.handleCreationSuccess();
+            })
+            .catch(err => {
+              console.log(err);
+              this.setState({ error: err.error });
+            });
     };
 
     // componentDidMount() {
@@ -122,4 +119,4 @@ class NewAccount extends Component {
 }
 
 
-export default NewAccount;
+export default withRouter(NewAccount);

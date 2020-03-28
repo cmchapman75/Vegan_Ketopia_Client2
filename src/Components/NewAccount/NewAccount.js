@@ -18,9 +18,7 @@ class NewAccount extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.createSubmit = this.createSubmit.bind(this);
       }
-   
-    
-    state = { error: null};
+       
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value});
     }

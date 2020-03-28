@@ -1,4 +1,3 @@
-
 import config from "../config";
 import TokenService from './Token'
 
@@ -7,7 +6,7 @@ const IngredientHelper = {
 
   addIngredient(ingredientData) {
     const authToken = TokenService.getAuthToken();
-    const url = `${config.API_ENDPOINT}/pantry`;
+    const url = `${config.API_ENDPOINT}/api/pantry`;
 
     return fetch(url, {
       method: "POST",

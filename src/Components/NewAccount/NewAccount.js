@@ -9,10 +9,10 @@ class NewAccount extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            error: null,
-            password: '',
+            error: null,            
             username: '',
-            emailAddress: ''
+            email_address: '',
+            password: ''
         }
     
         this.handleChange = this.handleChange.bind(this);
@@ -39,19 +39,19 @@ class NewAccount extends Component {
 
     createSubmit = e => {
         e.preventDefault();
-        const { username, emailAddress, password } = e.target;
-        console.log(username, emailAddress, password);
+        const { username, email_address, password } = e.target;
+        console.log(username, email_address, password);
 
         this.setState({ error: null });
 
         AuthHelper.createUser({
             username: username.value,
-            emailAddress: emailAddress.value,
+            email_address: email_address.value,
             password: password.value
         })
         .then(user => {
             username.value = "";
-            emailAddress.value = "";
+            email_address.value = "";
             password.value = "";
             this.handleCreationSuccess();
         })
@@ -89,8 +89,8 @@ class NewAccount extends Component {
                     <input 
                         className="field-input"
                         required
-                        name="emailAddress"
-                        value={this.state.emailAddress}
+                        name="email_address"
+                        value={this.state.email_address}
                         onChange={e => this.handleChange(e)}
                         // placeholder="Email Address"
                     />  

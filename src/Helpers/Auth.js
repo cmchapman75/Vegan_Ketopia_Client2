@@ -4,7 +4,7 @@ import TokenService from './Token'
 const AuthHelper = {
   createUser(newUser) {
     console.log(newUser);
-    return fetch(`${config.API_ENDPOINT}/api/users`, {
+    return fetch(`${config.API_ENDPOINT}/api/users/`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

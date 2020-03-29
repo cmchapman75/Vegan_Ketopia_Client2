@@ -135,7 +135,10 @@ export default class SearchRecipe extends React.Component {
           handleFilterChange={options => this.updateFilterOptions(options)}
           handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)} />
         <RecipeListFilter 
-          recipes={recipes} />
+          recipes={recipes}
+          searchTerms={this.searchTerms}
+          filterOptions={this.filterOptions}
+          filterOptionsCuisine={this.filterOptionsCuisine} />
     
         {/* // <section className="recipeResults">
         //   {this.displaySearchResults()}

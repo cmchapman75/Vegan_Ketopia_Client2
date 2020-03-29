@@ -20,7 +20,7 @@ class RecipesRoute extends Component {
   }
 
   getRecipes = () => {
-    const url = `${config.API_ENDPOINT}/recipes`;
+    const url = `${config.API_ENDPOINT}/api/recipes`;
     const authToken = TokenService.getAuthToken();
     fetch(url, {
       method: "GET",

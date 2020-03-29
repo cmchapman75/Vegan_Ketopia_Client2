@@ -48,7 +48,7 @@ export default class FancyModalButton extends Component {
     e.preventDefault();
     let ingredientId = this.props.id;
 
-    const url = `${config.API_ENDPOINT}/pantry/${ingredientId}`;
+    const url = `${config.API_ENDPOINT}/api/pantry/${ingredientId}`;
     const authToken = TokenService.getAuthToken();
     let { ingredient_name, in_stock, notes } = e.target;
     let updatedIngredient = {
@@ -79,7 +79,7 @@ export default class FancyModalButton extends Component {
 
   handleDeleteIngredient = (e) => {
     let ingredientId = this.props.id;
-    const url = `${config.API_ENDPOINT}/pantry/${ingredientId}`;
+    const url = `${config.API_ENDPOINT}/api/pantry/${ingredientId}`;
     const authToken = TokenService.getAuthToken();
 
     fetch(url, {

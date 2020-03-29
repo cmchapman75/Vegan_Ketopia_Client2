@@ -116,7 +116,7 @@ export default class SearchRecipe extends React.Component {
 
   render() {
 
-    const { recipes } = this.state;
+    const { recipes, searchTerms, filterOptions, filterOptionsCuisine } = this.state;
     return (
       <div className="searchRecipe">
         <p id="larger-search-text">Search our delicious and cruelty free recipes!</p>
@@ -136,9 +136,9 @@ export default class SearchRecipe extends React.Component {
           handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)} />
         <RecipeListFilter 
           recipes={recipes}
-          searchTerms={this.searchTerms}
-          filterOptions={this.filterOptions}
-          filterOptionsCuisine={this.filterOptionsCuisine} />
+          searchTerms={searchTerms}
+          filterOptions={filterOptions}
+          filterOptionsCuisine={filterOptionsCuisine} />
     
         {/* // <section className="recipeResults">
         //   {this.displaySearchResults()}

@@ -4,7 +4,7 @@ import TokenService from "./Token";
 const RecipeHelper = {
   createRecipe(newRecipe) {
     const authToken = TokenService.getAuthToken();
-    return fetch(`${config.API_ENDPOINT}/recipes`, {
+    return fetch(`${config.API_ENDPOINT}/api/recipes`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -15,7 +15,7 @@ const RecipeHelper = {
   },
   recipeById(id) {
     const authToken = TokenService.getAuthToken();
-    return fetch(`${config.API_ENDPOINT}/recipes/${id}`, {
+    return fetch(`${config.API_ENDPOINT}/api/recipes/${id}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -28,7 +28,7 @@ const RecipeHelper = {
 
   getRecipeOwnerData(id) {
     const authToken = TokenService.getAuthToken();
-    return fetch(`${config.API_ENDPOINT}/recipe/${id}`, {
+    return fetch(`${config.API_ENDPOINT}/api/recipe/${id}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -39,7 +39,7 @@ const RecipeHelper = {
     );
   },
   search(term) {
-    return fetch(`${config.API_ENDPOINT}/recipes/search/${term}`, {
+    return fetch(`${config.API_ENDPOINT}/api/recipes/search/${term}`, {
       method: "GET",
       headers: {
         "content-type": "application/json"
@@ -50,7 +50,7 @@ const RecipeHelper = {
   },
   delete(id) {
     const authToken = TokenService.getAuthToken();
-    return fetch(`${config.API_ENDPOINT}/recipes/${id}`, {
+    return fetch(`${config.API_ENDPOINT}/api/recipes/${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -60,7 +60,7 @@ const RecipeHelper = {
   },
 
   getRecipes() {
-    const url = `${config.API_ENDPOINT}/recipes`;
+    const url = `${config.API_ENDPOINT}/api/recipes`;
     const authToken = TokenService.getAuthToken();
     return fetch(url, {
       method: "GET",
@@ -74,7 +74,7 @@ const RecipeHelper = {
   },
   updateRecipe(updatedData, id) {
     const authToken = TokenService.getAuthToken()
-    return fetch(`${config.API_ENDPOINT}/recipes/${id}`, {
+    return fetch(`${config.API_ENDPOINT}/api/recipes/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

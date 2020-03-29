@@ -34,7 +34,7 @@ class PantryRoute extends Component {
   };
 
   getIngredients = () => {
-    const url = `${config.API_ENDPOINT}/pantry`;
+    const url = `${config.API_ENDPOINT}/api/pantry`;
     const authToken = TokenService.getAuthToken();
     fetch(url, {
       method: "GET",
@@ -123,7 +123,7 @@ class PantryRoute extends Component {
 
     this.setState({ error: null });
     const searchInput = this.state.searchTerm;
-    const url = `${config.API_ENDPOINT}/pantry`;
+    const url = `${config.API_ENDPOINT}/api/pantry`;
 
     let queryString = "?q=" + searchInput;
     const newUrl = url + queryString

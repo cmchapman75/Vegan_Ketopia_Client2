@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './RecipeFilter.css';
-// child of RecipeSearch 
+
+// child of RecipeSearch --creates dropdowns for Recipe Search Page
 class RecipeFilter extends Component {
   render() {
     const { handleFilterChange, handleFilterChangeCuisine } = this.props;

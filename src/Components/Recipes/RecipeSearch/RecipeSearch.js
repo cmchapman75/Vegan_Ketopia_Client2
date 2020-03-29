@@ -1,21 +1,32 @@
 import React from "react";
-import './RecipeSearch.css';
 import { Link } from "react-router-dom";
+
+import Header from '../../Header/Header'
+import RecipeSearchBox from '../RecipeSearchBox/RecipeSearchBox'
+import RecipeFilter from '../RecipeFilter/RecipeFilter'
+import RecipeListFilter from '../RecipeListFilter/RecipeListFilter'
+
+import './RecipeSearch.css';
+
+
 
 export default class SearchRecipe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      recipes: [],
       searchTerms: '',
-      searchResults: []
+      searchResults: [],
+      filterOptions: '',
+      filterOptionsCuisine: ''
     };
   }
 
-  handleSearch = (event) => {
-    event.preventDefault();
+  handleSearch = (searchSubmitEvent, searchInput) => {
+    searchSubmitEvent.preventDefault();
     let searchArray = this.state.searchTerms.split(' ')
     let searchTerms = searchArray.join(',+')
-    let URL = `http://localhost:8000/recipes/getRecipes?ingredients=${searchTerms}`;
+    let URL = `http://localhost:8000/api/recipes/getRecipes?ingredients=${searchTerms}`;
 
     fetch(URL)
       .then(res => {

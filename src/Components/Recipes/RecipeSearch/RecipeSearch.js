@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // import Header from '../../Header/Header'
 import RecipeSearchBox from '../RecipeSearchBox/RecipeSearchBox'
@@ -16,7 +16,6 @@ export default class SearchRecipe extends React.Component {
     this.state = {
       recipes: [],
       searchTerms: '',
-      searchResults: [],
       filterOptions: '',
       filterOptionsCuisine: ''
     };
@@ -26,26 +25,50 @@ export default class SearchRecipe extends React.Component {
     searchSubmitEvent.preventDefault();
     let searchArray = this.state.searchTerms.split(' ')
     let searchTerms = searchArray.join(',+')
-    let URL = `http://localhost:8000/api/recipes/getRecipes?ingredients=${searchTerms}`;
+    // let URL = `http://localhost:8000/api/recipes/getRecipes?ingredients=${searchTerms}`;
+    const baseUrl = "http://localhost:8000/api/recipes/getRecipes";
+    //const key = "lorem"; --add key here.
+    const fullSearchUrl = this.fullQuery(baseUrl, searchTerms);
 
-    fetch(URL)
+    fetch(fullSearchUrl)
       .then(res => {
         if (!res.ok) {
           throw new Error(res.statusText);
         }
         return res.json();
       })
-      .then(results => {
-        this.setState({
-          searchResults: results,
+      .then(results => results.json())
+        .then(recipeResultObj => {
+          this.setState({
+            recipes: recipeResultObj,
+            error: null
+          });
+        })
+        .catch(error => {
+          this.setState({
+            error: error.message
+          });
         });
-      })
-      .catch(err => {
-        this.setState({
-          error: 'Does Not Exist',
-        });
-      })
   }
+
+  fullQuery = (baseURL, searchInput ) => {
+    // add key later
+    const { filterOptions, filterOptionsCuisine } = this.state;
+    let fullQuery;
+    if (searchInput !== "") {
+      fullQuery = "?q=" + searchInput;
+    }
+    if (filterOptions !== "") {
+      fullQuery = fullQuery + "&recipeType" + filterOptions;
+    }
+    if (filterOptionsCuisine !== "") {
+      fullQuery = fullQuery + "&cuisineType" + filterOptionsCuisine;
+    }
+  
+    const fullUrl = baseURL + fullQuery;
+    // add key later
+    return fullUrl;
+  };
 
   updateSearchTerm(term) {
     this.setState({

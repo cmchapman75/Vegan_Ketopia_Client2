@@ -3,6 +3,7 @@ import './RecipeListFilter.css';
 import RecipeDetail from '../RecipeDetail/RecipeDetail';
 
 class RecipeFilter extends Component {
+  //runs the filters and mapping over the recipes table in the database--child of RecipeSearch
   render() {
     const { searchTerms, filterOptions, filterOptionsCuisine } = this.props;
     const recipeList = this.props.recipes

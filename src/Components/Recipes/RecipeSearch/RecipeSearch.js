@@ -26,10 +26,10 @@ export default class SearchRecipe extends React.Component {
     searchSubmitEvent.preventDefault();
     let searchArray = this.state.searchTerms.split(' ')
     let searchTerms = searchArray.join(',+')
-    // let URL = `http://localhost:8000/api/recipes/getRecipes?ingredients=${searchTerms}`;
+    
     const baseUrl = "http://localhost:8000/api/recipes/";
     const authToken = TokenService.getAuthToken();
-    //const key = "lorem"; --add key here.
+    //create full url from all search terms.
     const fullSearchUrl = this.fullQuery(baseUrl, searchTerms);
 
     fetch(fullSearchUrl,  {      
@@ -62,16 +62,17 @@ export default class SearchRecipe extends React.Component {
     // add key later
     const { filterOptions, filterOptionsCuisine } = this.state;
     let fullQuery;
+    
     if (searchInput !== "") {
       fullQuery = "?q=" + searchInput;
     }
     if (filterOptions !== "") {
-      fullQuery = fullQuery + "&recipeType" + filterOptions;
+      fullQuery = fullQuery + "&mealType" + filterOptions;
     }
     if (filterOptionsCuisine !== "") {
       fullQuery = fullQuery + "&cuisineType" + filterOptionsCuisine;
     }
-  
+    console.log(fullQuery);
     const fullUrl = baseURL + fullQuery;
     // add key later
     return fullUrl;

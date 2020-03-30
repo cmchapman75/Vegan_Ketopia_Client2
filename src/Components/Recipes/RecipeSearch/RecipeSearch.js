@@ -38,28 +38,30 @@ export default class SearchRecipe extends React.Component {
 
     fetch(fullSearchUrl,  {      
       headers: {
-        "content-type": "application/json",
+        "content-type": "application/json",        
         "authorization": `Bearer ${authToken}`
-      }
-    })      
+      }      
+    })          
       .then(res => {
+        // console.log(res);
         if (!res.ok) {
           throw new Error(res.statusText);
-        }
-        return res.json();
+        }        
+        // return res.json();        
       })
       .then(results => results.json())
         .then(recipeResultObj => {
+          console.log(recipeResultObj);
           this.setState({
             recipes: recipeResultObj,
-            error: null
-          });
+            error: null            
+          });          
         })
         .catch(error => {
           this.setState({
             error: error.message
           });
-        });
+        });        
   }
 
   fullQuery = (baseURL, searchInput ) => {
@@ -79,7 +81,7 @@ export default class SearchRecipe extends React.Component {
     
     let fullQuery = queryParams.join("&");
     const fullUrl = baseURL + "?" + fullQuery;
-    console.log(fullQuery);
+    // console.log(fullQuery);
     return fullUrl;
   };
 
@@ -94,14 +96,14 @@ export default class SearchRecipe extends React.Component {
     this.setState({
       filterOptions: options      
     })
-    console.log(options);
+    // console.log(options);
   }
   
   updateFilterOptionsCuisine(optionsCuisine) {
     this.setState({
       filterOptionsCuisine: optionsCuisine   
     })
-    console.log(optionsCuisine);
+    // console.log(optionsCuisine);
   }
 
   displaySearchResults = () => {

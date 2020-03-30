@@ -15,7 +15,7 @@ class RecipeSearchBox extends Component {
             type="text"
             id="search"
             placeholder="Broccoli or Zucchini" 
-            value={this.props.searchTerms}
+            value={this.props.term}
             onChange={e => this.props.handleUpdate(e.target.value)}/>
            <button id="searchButton" type="submit">Submit</button>  
          </form>

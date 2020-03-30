@@ -1,4 +1,5 @@
 import React from "react";
+import TokenService from '../../../Helpers/Token'
 import { Link } from "react-router-dom";
 
 // import Header from '../../Header/Header'
@@ -27,10 +28,16 @@ export default class SearchRecipe extends React.Component {
     let searchTerms = searchArray.join(',+')
     // let URL = `http://localhost:8000/api/recipes/getRecipes?ingredients=${searchTerms}`;
     const baseUrl = "http://localhost:8000/api/recipes/";
+    const authToken = TokenService.getAuthToken();
     //const key = "lorem"; --add key here.
     const fullSearchUrl = this.fullQuery(baseUrl, searchTerms);
 
-    fetch(fullSearchUrl)
+    fetch(fullSearchUrl,  {      
+      headers: {
+        "content-type": "application/json",
+        "authorization": `Bearer ${authToken}`
+      }
+    })      
       .then(res => {
         if (!res.ok) {
           throw new Error(res.statusText);

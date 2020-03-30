@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // import Header from '../../Header/Header'
 import RecipeSearchBox from '../RecipeSearchBox/RecipeSearchBox'
@@ -26,7 +26,7 @@ export default class SearchRecipe extends React.Component {
     let searchArray = this.state.searchTerms.split(' ')
     let searchTerms = searchArray.join(',+')
     // let URL = `http://localhost:8000/api/recipes/getRecipes?ingredients=${searchTerms}`;
-    const baseUrl = "http://localhost:8000/api/recipes/getRecipes";
+    const baseUrl = "http://localhost:8000/api/recipes/";
     //const key = "lorem"; --add key here.
     const fullSearchUrl = this.fullQuery(baseUrl, searchTerms);
 
@@ -90,29 +90,30 @@ export default class SearchRecipe extends React.Component {
     })
     console.log(optionsCuisine);
   }
-  // displaySearchResults = () => {
-  //   if (this.state.searchResults.length === 0) {
-  //     return;
-  //   }
-  //   else {
-  //     return (
-  //       <div>
-  //         <h2 id="results">Results:</h2>
-  //         {this.state.recipes.map(recipe => <li key={recipe.id}>
-  //           <Link className="individualResult"
-  //             to={{
-  //               pathname: `/recipes/search/${recipe.id}`,
-  //               state: {
-  //                 recipeId: recipe.id
-  //               }
-  //             }}>
-  //             {recipe.title}
-  //           </Link>
-  //         </li>)}
-  //       </div>
-  //     )
-  //   }
-  // }
+
+  displaySearchResults = () => {
+    if (this.state.recipes.length === 0) {
+      return;
+    }
+    else {
+      return (
+        <div>
+          <h2 id="results">Recipes:</h2>
+          {this.state.recipes.map(recipe => <li key={recipe.id}>
+            <Link className="individualResult"
+              to={{
+                pathname: `/recipes/search/${recipe.id}`,
+                state: {
+                  recipeId: recipe.id
+                }
+              }}>
+              {recipe.title}
+            </Link>
+          </li>)}
+        </div>
+      )
+    }
+  }
 
   render() {
 
@@ -140,10 +141,9 @@ export default class SearchRecipe extends React.Component {
           filterOptions={filterOptions}
           filterOptionsCuisine={filterOptionsCuisine} />
     
-        {/* // <section className="recipeResults">
-        //   {this.displaySearchResults()}
-
-        // </section> */}
+         <section className="recipeResults">
+          {this.displaySearchResults()}
+         </section>
 
       </div>
     )

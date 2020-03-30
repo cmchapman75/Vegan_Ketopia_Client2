@@ -1,6 +1,7 @@
 import React from "react";
-import Recipe from "../../../Helpers/Recipe";
+import RecipeHelper from "../../../Helpers/Recipe";
 import _ from "lodash";
+
 
 export default class SearchRecipe extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class SearchRecipe extends React.Component {
 
   getRecipeInstructions = () => {
     let recipeId = _.get(this, "props.location.state.recipeId");
-    let URL = ``;
+    let URL = `http://localhost:8000/api/recipes/${recipeId}`;
 
     fetch(URL)
       .then(res => {
@@ -35,7 +36,10 @@ export default class SearchRecipe extends React.Component {
           recipe: recipe,
           recipeId: recipeId,
           ingredients: recipe.Ingredients,
-          instructions: recipe.Instructions
+          instructions: recipe.Instructions,
+          mealType: recipe.mealType,
+          cuisineType: recipe.cuisineType
+
         });
       })
       .catch(err => {
@@ -52,6 +56,8 @@ export default class SearchRecipe extends React.Component {
   addRecipe = () => {
     let instructionsSet = [];
     let ingredientsSet = [];
+    let mealType = '';
+    let cuisineType = '';
     if (this.state.instructions) {
       this.state.instructions.steps.map(instruction =>
         instructionsSet.push(instruction.step)
@@ -65,8 +71,11 @@ export default class SearchRecipe extends React.Component {
       title: this.state.recipe.title,
       recipe_description: instructionsSet,
       recipe_ingredients: ingredientsSet,
+      mealType: mealType,
+      cuisineType: cuisineType
+
     };
-    Recipe.createRecipe(recipeObj)
+    RecipeHelper.createRecipe(recipeObj)
       .then(recipe => {
         this.handleCreationSuccess();
       })
@@ -86,10 +95,10 @@ export default class SearchRecipe extends React.Component {
     return (
       <div className="view" id="recipeView">
         <div className="image-container">
-          <div
+          {/* <div
             className="image"
             style={{ backgroundImage: `url(${this.state.recipe.image})` }}
-          />
+          /> */}
         </div>
         <p className="recipePageHeader">Title:</p>
         <p className="recipeInfo">{this.state.recipe.title}</p>

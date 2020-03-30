@@ -11,7 +11,7 @@ class RecipeFilter extends Component {
         .filter(recipe => recipe.ingredients.includes(searchTerms.toLowerCase()))
         .map((recipe, key) => <RecipeDetail {...recipe} key={key} />);
         
-        // console.log(searchTerms);
+        console.log(this.props.recipes);
         // console.log(filterOptions);
         // console.log(filterOptionsCuisine);
     return (

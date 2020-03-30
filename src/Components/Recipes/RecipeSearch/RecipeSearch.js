@@ -24,13 +24,17 @@ export default class SearchRecipe extends React.Component {
 
   handleSubmit = (searchSubmitEvent, searchInput) => {
     searchSubmitEvent.preventDefault();
-    let searchArray = this.state.searchTerms.split(' ')
-    let searchTerms = searchArray.join(',+')
+    this.setState({
+      searchTerms: searchInput
+    });
+    //Code below to expand to multiple search terms. 
+    // let searchArray = this.state.searchTerms.split(' ')
+    // let searchTerms = searchArray.join(',+')
     
     const baseUrl = "http://localhost:8000/api/recipes/";
     const authToken = TokenService.getAuthToken();
     //create full url from all search terms.
-    const fullSearchUrl = this.fullQuery(baseUrl, searchTerms);
+    const fullSearchUrl = this.fullQuery(baseUrl, searchInput);
 
     fetch(fullSearchUrl,  {      
       headers: {
@@ -61,20 +65,21 @@ export default class SearchRecipe extends React.Component {
   fullQuery = (baseURL, searchInput ) => {
     // add key later
     const { filterOptions, filterOptionsCuisine } = this.state;
-    let fullQuery;
+    let queryParams = [];
     
     if (searchInput !== "") {
-      fullQuery = "?q=" + searchInput;
+      queryParams.push("q=" + searchInput);
     }
     if (filterOptions !== "") {
-      fullQuery = fullQuery + "&mealType" + filterOptions;
+      queryParams.push("mealType=" + filterOptions);
     }
     if (filterOptionsCuisine !== "") {
-      fullQuery = fullQuery + "&cuisineType" + filterOptionsCuisine;
+      queryParams.push("cuisineType=" + filterOptionsCuisine);
     }
+    
+    let fullQuery = queryParams.join("&");
+    const fullUrl = baseURL + "?" + fullQuery;
     console.log(fullQuery);
-    const fullUrl = baseURL + fullQuery;
-    // add key later
     return fullUrl;
   };
 
@@ -130,7 +135,7 @@ export default class SearchRecipe extends React.Component {
       <div className="searchRecipe">
         <p id="larger-search-text">Search our delicious and cruelty free recipes!</p>
         <p id="recipe-search-text">
-          For best results, please use whole words as search terms. <br />Feel free to include more than one search term at a time.
+          For best results, please use whole words as search terms. <br />Please use one search term at a time.
         </p>
         <br />
         {/* <form className="searchArea" onSubmit={this.handleSearch}>

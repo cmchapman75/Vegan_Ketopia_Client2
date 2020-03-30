@@ -47,9 +47,8 @@ export default class SearchRecipe extends React.Component {
         if (!res.ok) {
           throw new Error(res.statusText);
         }        
-        // return res.json();        
-      })
-      .then(results => results.json())
+        return res.json();        
+      })     
         .then(recipeResultObj => {
           console.log(recipeResultObj);
           this.setState({
@@ -65,6 +64,7 @@ export default class SearchRecipe extends React.Component {
   }
 
   fullQuery = (baseURL, searchInput ) => {
+    console.log(searchInput);
     // add key later
     const { filterOptions, filterOptionsCuisine } = this.state;
     let queryParams = [];
@@ -96,14 +96,14 @@ export default class SearchRecipe extends React.Component {
     this.setState({
       filterOptions: options      
     })
-    // console.log(options);
+    console.log(options);
   }
   
   updateFilterOptionsCuisine(optionsCuisine) {
     this.setState({
       filterOptionsCuisine: optionsCuisine   
     })
-    // console.log(optionsCuisine);
+    console.log(optionsCuisine);
   }
 
   displaySearchResults = () => {

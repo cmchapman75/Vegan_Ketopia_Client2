@@ -39,6 +39,7 @@ class RecipeFilter extends Component {
                 <option value="German">German</option>
                 <option value="Greek">Greek</option>
                 <option value="Indian">Indian</option>
+                <option value="Irish">Irish</option>
                 <option value="Italian">Italian</option>
                 <option value="Japanese">Japanese</option>                        
                 <option value="Korean">Korean</option>

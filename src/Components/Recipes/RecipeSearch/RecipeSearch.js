@@ -21,7 +21,7 @@ export default class SearchRecipe extends React.Component {
     };
   }
 
-  handleSearch = (searchSubmitEvent, searchInput) => {
+  handleSubmit = (searchSubmitEvent, searchInput) => {
     searchSubmitEvent.preventDefault();
     let searchArray = this.state.searchTerms.split(' ')
     let searchTerms = searchArray.join(',+')
@@ -130,7 +130,7 @@ export default class SearchRecipe extends React.Component {
           <button id="searchButton" type="submit">Search</button>
         </form> */}
         <RecipeSearchBox 
-          handleSearch={this.handleSubmit}
+          handleSubmit={this.handleSubmit}
           handleUpdate={term => this.updateSearchTerm(term)} />
         <RecipeFilter
           handleFilterChange={options => this.updateFilterOptions(options)}

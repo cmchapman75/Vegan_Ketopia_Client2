@@ -20,6 +20,7 @@ import RecipeList from "./Components/Recipes/RecipeList/RecipeList";
 
 import NotFoundRoute from "./Routes/NotFoundRoute/NotFoundRoute";
 
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {

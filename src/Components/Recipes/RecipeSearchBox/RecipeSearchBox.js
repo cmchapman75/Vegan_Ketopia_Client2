@@ -8,16 +8,21 @@ class RecipeSearchBox extends Component {
   render() {
     return (
       <div className="searchRecipe" id="SearchBox">
-        <form className="searchArea" onSubmit={e => this.props.handleSubmit(e)}>
+        <form className="searchArea" onSubmit={e => 
+                this.props.handleSubmit(e)}>
           <label htmlFor="ingredient-search">Search: </label>
          
           <input 
             type="text"
+            name="ingredient_name"
             id="search"
             placeholder="Broccoli or Zucchini" 
             value={this.props.term}
-            onChange={e => this.props.handleUpdate(e.target.value)}/>
-           <button id="searchButton" type="submit">Submit</button>  
+            onChange={e => 
+                this.props.handleUpdate(e.target.value)}/>
+           <button 
+             id="searchButton" 
+             type="submit">Submit</button>  
          </form>
       </div>   
     );

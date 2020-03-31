@@ -13,17 +13,17 @@
    padding-top: 10px;
  }
 
-.App {
+ .App {
   font-family: "Nanum Gothic", sans-serif;
   background-color: rgb(204, 240, 180);
   /* height: 2000px; */
-}
+ } 
 
 button {
   background-color: rgb(238, 124, 124);
-}
+} */
 
-.bigButton {
+/* .bigButton {
   width: 200px;
   height: 100px;
   font-family: "Nanum Gothic", sans-serif;
@@ -33,8 +33,8 @@ button {
   border: solid 1px;
   border-radius: 10%;
   margin: 20px;
-}
-.medButton {
+} */
+/* .medButton {
   width: 150px;
   height: 50px;
   font-family: "Nanum Gothic", sans-serif;
@@ -45,9 +45,9 @@ button {
   border-radius: 10%;
   margin: 1%;
   margin-bottom: 20px;
-}
+} */ 
 
-.smallButton {
+/* .smallButton {
   width: 90px;
   height: 50px;
   font-family: "Nanum Gothic", sans-serif;
@@ -97,7 +97,7 @@ button:hover {
 
 .recipePage {
   align-content: center;
-}
+} */
 
 .heading {
   justify-content: center;
@@ -118,7 +118,7 @@ button:hover {
 
 
 
-.log-out-user-link,
+/* .log-out-user-link,
 .login-page-link {
   color: #141514;
   text-decoration: none;
@@ -128,9 +128,9 @@ button:hover {
 
 .log-out-user-link:hover {
   color: #2F7604;
-}
+} */
 
-.login-page-link:hover {
+/* .login-page-link:hover {
   color: #2F7604;
 }
 
@@ -142,9 +142,9 @@ button:hover {
 
 .dashboard-link-selector:hover {
   color: #2F7604;
-}
+} */
 
-.nav-link-text {
+/* .nav-link-text {
   font-family: "cookiesregular";
   color: #141514;
   text-decoration: none;
@@ -157,27 +157,26 @@ button:hover {
 #navBar {
   text-align: center;
   background-color: #b6d084;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   /* -moz-osx-font-smoothing: grayscale; */
-}
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+}  */
 
-#modal-btn {
+/* #modal-btn {
   color: red;
-}
+} */
 
-.modal {
+/* .modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -188,8 +187,8 @@ code {
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-}
-.content {
+} */
+/* .content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -199,8 +198,8 @@ code {
   width: 24rem;
   border-radius: 0.5rem;
   color: red;
-}
-.toggle-button {
+} */
+/* .toggle-button {
   float: right;
   width: 1.5rem;
   line-height: 1.5rem;
@@ -211,8 +210,8 @@ code {
 }
 .toggle-button:hover {
   background-color: darkgray;
-}
-.actions {
+} */
+/* .actions {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
@@ -230,10 +229,10 @@ code {
 .inputSmall {
   height: 25px;
   font-size: 20px;
-}
+} */
 
-@media screen and (min-width: 768px) {
-  .smallButton {
+/* @media screen and (min-width: 768px) { */
+  /* .smallButton {
     width: 150px;
     height: 60px;
     font-family: "Nanum Gothic", sans-serif;
@@ -242,9 +241,9 @@ code {
     cursor: pointer;
     border: solid 1px;
     border-radius: 10%;
-  }
+  } */
 
-  .medButton {
+  /* .medButton {
     width: 150px;
     height: 50px;
     font-family: "Nanum Gothic", sans-serif;
@@ -253,8 +252,8 @@ code {
     cursor: pointer;
     border: solid 1px;
     margin: 1%;
-  }
-  .bigButton {
+  } */
+  /* .bigButton {
     width: 200px;
     height: 100px;
     font-family: "Nanum Gothic", sans-serif;
@@ -264,5 +263,4 @@ code {
     border: solid 1px;
     border-radius: 10%;
     margin: 2%;
-  }
-}
+  } */

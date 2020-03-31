@@ -16,10 +16,11 @@ export default class SearchRecipe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipes: [],
+      // recipes: [],
       searchTerm: '',
       filterOptions: '',
-      filterOptionsCuisine: ''
+      filterOptionsCuisine: '',
+      searchResults: []
     };
   }
 
@@ -29,11 +30,12 @@ export default class SearchRecipe extends React.Component {
     //Code below to expand to multiple search terms. 
     // let searchArray = this.state.searchTerms.split(' ')
     // let searchTerms = searchArray.join(',+')
-    
+    this.setState({ error: null });
+    const searchInput = this.state.searchTerm;
     const baseUrl = `${config.API_ENDPOINT}/api/recipes/search/`;
     const authToken = TokenService.getAuthToken();
     //create full url from all search terms.
-    const fullSearchUrl = this.fullQuery(baseUrl, this.state.searchTerm);
+    const fullSearchUrl = this.fullQuery(baseUrl, searchInput);
 
     fetch(fullSearchUrl,  {      
       headers: {
@@ -51,7 +53,7 @@ export default class SearchRecipe extends React.Component {
         .then(recipeResultObj => {
           console.log(recipeResultObj);
           this.setState({
-            recipes: recipeResultObj,
+            searchResults: recipeResultObj,
             error: null            
           });          
         })
@@ -64,6 +66,7 @@ export default class SearchRecipe extends React.Component {
 
   fullQuery = (baseURL, searchInput ) => {
     console.log(searchInput);
+    console.log('Hello there!');
     // add key later
     // const { filterOptions, filterOptionsCuisine } = this.state;
     let queryParams = [];
@@ -104,8 +107,29 @@ export default class SearchRecipe extends React.Component {
     console.log(optionsCuisine);
   }
 
+  // updateSearchTerm(e) {
+  //   e.preventDefault();
+  //   this.setState({
+  //     searchTerms: e.target.value
+  //   });   
+  // }
+  
+  // updateFilterOptions(e) {
+  //   e.preventDefault();
+  //   this.setState({
+  //     filterOptions: e.target.value     
+  //   })
+  // }
+  
+  // updateFilterOptionsCuisine(e) {
+  //   e.preventDefault();
+  //   this.setState({
+  //     filterOptionsCuisine: e.target.value   
+  //   })
+  // }
+
   displaySearchResults = () => {
-    if (this.state.recipes.length === 0) {
+    if (this.state.searchResults.length === 0) {
       return;
     }
     else {

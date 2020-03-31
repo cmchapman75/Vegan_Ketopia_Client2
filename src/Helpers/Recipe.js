@@ -13,6 +13,20 @@ const RecipeHelper = {
       body: JSON.stringify(newRecipe)
     })
   },
+  
+  recipeByIngredient(ingredient) {
+    const authToken = TokenService.getAuthToken();
+    return fetch(`${config.API_ENDPOINT}/api/recipes/${ingredient}`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+        "Authorization": `Bearer ${authToken}`
+      }
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+      );
+  },
+
   recipeById(id) {
     const authToken = TokenService.getAuthToken();
     return fetch(`${config.API_ENDPOINT}/api/recipes/${id}`, {

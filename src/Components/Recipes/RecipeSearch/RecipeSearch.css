@@ -8,7 +8,7 @@
  #141514 Black
  */
 
-.recipeResults {
+/* .recipeResults {
     list-style: none;
     margin: 5%;
     font-family: 'Nanum Gothic', sans-serif;
@@ -30,7 +30,7 @@
     background-color: #FFCB32; 
 } */
 
-.searchRecipe {
+/*.searchRecipe {
     margin: 5%;
 }
 
@@ -53,4 +53,4 @@
 
 .buttonGroupSearch {
     display: flex;
-}
+} */

@@ -9,10 +9,8 @@ class RecipesRoute extends Component {
     super(props);
 
     this.state = {
-      ingredients: [],
       recipes: [],
-      addRecipes: [],
-      filteredRecipes: [],
+      addRecipes: false,
       error: null
     };
   }
@@ -21,7 +19,8 @@ class RecipesRoute extends Component {
     this.getRecipes();
   }
 
-  getRecipes = () => {
+  getRecipes = () => {   
+    console.log("Working!!")
     const url = `${config.API_ENDPOINT}/api/recipes`;
     const authToken = TokenService.getAuthToken();
     fetch(url, {
@@ -75,7 +74,7 @@ class RecipesRoute extends Component {
         <Link to="recipes/create">
           <button className="bigButton">Create new recipe</button>
         </Link>
-        {this.state.recipes.length === 0 ? <><p id="no-recipes-in-list">You don't have any saved recipes yet.</p> <p>Click above to search for or create a recipe.</p></> : <h1 id="recipeHeader">My Recipes:</h1>}
+        {this.state.recipes.length === 0 ? <><p id="no-recipes-in-list">No recipes are saved yet.</p> <p>Search and find your new favorite recipe or create one.</p></> : <h1 id="recipeHeader">My Recipes:</h1>}
         {this.state.recipes && this.renderRecipes()}
       </section>
     );

@@ -1,5 +1,13 @@
 
-
+.bigButton {
+    text-align: center;
+    color: white;
+    background-color: rgb(219, 5, 5);
+    padding: 10px;
+    margin: 10px;
+    width: 70px;
+    border-radius: 25%;
+}
 .recipeSection {
     text-align: center;
 }

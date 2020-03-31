@@ -11,6 +11,8 @@ class RecipesRoute extends Component {
     this.state = {
       ingredients: [],
       recipes: [],
+      addRecipes: [],
+      filteredRecipes: [],
       error: null
     };
   }

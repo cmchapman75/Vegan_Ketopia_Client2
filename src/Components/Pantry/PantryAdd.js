@@ -114,7 +114,7 @@ export default class FancyModalButton extends Component {
                 type="text"
                 className="modalInput"></input>
               <button className="smallButton" id="close"
-              >Hit it!</button>
+              >Add it!</button>
             </form>
           </this.StyledModal>
         </div>

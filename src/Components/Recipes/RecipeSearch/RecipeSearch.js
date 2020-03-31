@@ -1,10 +1,11 @@
 import React from "react";
 import TokenService from '../../../Helpers/Token'
+import config from '../../../config';
 import { Link } from "react-router-dom";
 
 // import Header from '../../Header/Header'
 import RecipeSearchBox from '../RecipeSearchBox/RecipeSearchBox'
-import RecipeFilter from '../RecipeFilter/RecipeFilter'
+// import RecipeFilter from '../RecipeFilter/RecipeFilter'
 import RecipeListFilter from '../RecipeListFilter/RecipeListFilter'
 
 import './RecipeSearch.css';
@@ -16,30 +17,28 @@ export default class SearchRecipe extends React.Component {
     super(props);
     this.state = {
       recipes: [],
-      searchTerms: '',
+      searchTerm: '',
       filterOptions: '',
       filterOptionsCuisine: ''
     };
   }
 
-  handleSubmit = (searchSubmitEvent, searchInput) => {
-    searchSubmitEvent.preventDefault();
-    this.setState({
-      searchTerms: searchInput
-    });
+  handleSubmit = (e) => {
+    e.preventDefault();
+    
     //Code below to expand to multiple search terms. 
     // let searchArray = this.state.searchTerms.split(' ')
     // let searchTerms = searchArray.join(',+')
     
-    const baseUrl = "http://localhost:8000/api/recipes/";
+    const baseUrl = `${config.API_ENDPOINT}/api/recipes/search/`;
     const authToken = TokenService.getAuthToken();
     //create full url from all search terms.
-    const fullSearchUrl = this.fullQuery(baseUrl, searchInput);
+    const fullSearchUrl = this.fullQuery(baseUrl, this.state.searchTerm);
 
     fetch(fullSearchUrl,  {      
       headers: {
         "content-type": "application/json",        
-        "authorization": `Bearer ${authToken}`
+        'Authorization': `Bearer ${authToken}`
       }      
     })          
       .then(res => {
@@ -66,19 +65,18 @@ export default class SearchRecipe extends React.Component {
   fullQuery = (baseURL, searchInput ) => {
     console.log(searchInput);
     // add key later
-    const { filterOptions, filterOptionsCuisine } = this.state;
+    // const { filterOptions, filterOptionsCuisine } = this.state;
     let queryParams = [];
     
     if (searchInput !== "") {
       queryParams.push("q=" + searchInput);
-    }
-    if (filterOptions !== "") {
-      queryParams.push("mealType=" + filterOptions);
-    }
-    if (filterOptionsCuisine !== "") {
-      queryParams.push("cuisineType=" + filterOptionsCuisine);
-    }
-    
+    // }
+    // if (filterOptions !== "") {
+    //   queryParams.push("mealType=" + filterOptions);
+    // }
+    // if (filterOptionsCuisine !== "") {
+    //   queryParams.push("cuisineType=" + filterOptionsCuisine);
+    }    
     let fullQuery = queryParams.join("&");
     const fullUrl = baseURL + "?" + fullQuery;
     // console.log(fullQuery);
@@ -132,7 +130,9 @@ export default class SearchRecipe extends React.Component {
 
   render() {
 
-    const { recipes, searchTerms, filterOptions, filterOptionsCuisine } = this.state;
+    //Line below to be implemented when I can figure out correct query for server.
+    // const { recipes, searchTerm, filterOptions, filterOptionsCuisine } = this.state;
+    const { recipes, searchTerm } = this.state;
     return (
       <div className="searchRecipe">
         <p id="larger-search-text">Search our delicious and cruelty free recipes!</p>
@@ -147,14 +147,16 @@ export default class SearchRecipe extends React.Component {
         <RecipeSearchBox 
           handleSubmit={this.handleSubmit}
           handleUpdate={term => this.updateSearchTerm(term)} />
-        <RecipeFilter
+        {/* <RecipeFilter
           handleFilterChange={options => this.updateFilterOptions(options)}
-          handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)} />
+          handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)} /> */}
         <RecipeListFilter 
           recipes={recipes}
-          searchTerms={searchTerms}
-          filterOptions={filterOptions}
-          filterOptionsCuisine={filterOptionsCuisine} />
+          searchTerms={searchTerm}
+          //To be implemented later.
+          // filterOptions={filterOptions}
+          // filterOptionsCuisine={filterOptionsCuisine} 
+          />
     
          <section className="recipeResults">
           {this.displaySearchResults()}

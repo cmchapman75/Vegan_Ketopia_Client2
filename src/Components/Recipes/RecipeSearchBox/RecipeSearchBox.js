@@ -14,12 +14,13 @@ class RecipeSearchBox extends Component {
          
           <input 
             type="text"
-            name="ingredient_name"
-            id="search"
+            name="ingredient_search"
+            id="ingredient-search-field"
             placeholder="Broccoli or Zucchini" 
             value={this.props.term}
             onChange={e => 
                 this.props.handleUpdate(e.target.value)}/>
+                <br></br>
            <button 
              id="searchButton" 
              type="submit">Submit</button>  

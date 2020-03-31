@@ -16,7 +16,7 @@ export default class SearchRecipe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // recipes: [],
+      recipes: [],
       searchTerm: '',
       filterOptions: '',
       filterOptionsCuisine: '',
@@ -88,7 +88,7 @@ export default class SearchRecipe extends React.Component {
 
   updateSearchTerm(term) {
     this.setState({
-      searchTerms: term
+      searchTerm: term
     })
     console.log(term);
   }
@@ -164,10 +164,7 @@ export default class SearchRecipe extends React.Component {
           For best results, please use whole words as search terms. <br />Please use one search term at a time.
         </p>
         <br />
-        {/* <form className="searchArea" onSubmit={this.handleSearch}>
-          <input id="searchBar" type="text" placeholder="Search by ingredients" onChange={e => this.setState({ searchTerms: e.target.value })}></input>
-          <button id="searchButton" type="submit">Search</button>
-        </form> */}
+        
         <RecipeSearchBox 
           handleSubmit={this.handleSubmit}
           handleUpdate={term => this.updateSearchTerm(term)} />

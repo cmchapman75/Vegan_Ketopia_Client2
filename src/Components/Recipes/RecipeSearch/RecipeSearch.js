@@ -173,7 +173,7 @@ export default class SearchRecipe extends React.Component {
           handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)} /> */}
         <RecipeListFilter 
           recipes={recipes}
-          searchTerms={searchTerm}
+          searchTerm={searchTerm}
           //To be implemented later.
           // filterOptions={filterOptions}
           // filterOptionsCuisine={filterOptionsCuisine} 

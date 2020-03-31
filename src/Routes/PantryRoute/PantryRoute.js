@@ -163,7 +163,7 @@ class PantryRoute extends Component {
         <form onSubmit={this.handleSearchSubmit} className="pantrySearch">
           <label
             htmlFor="ingredient-search-field" className="randomLabel"
-          >Search Pantry</label>
+          >Search Pantry: </label>
           <br></br>
           <input
             type="text"

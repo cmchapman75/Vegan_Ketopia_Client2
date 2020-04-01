@@ -8,7 +8,7 @@ export default class DetailedView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipe: {},
+      recipe:this.props.recipe,
       owner: {}
     };
   }
@@ -23,8 +23,8 @@ export default class DetailedView extends React.Component {
     RecipeHelper.recipeById(recipeId).then(
       recipeData => {
         this.setState({
-          recipe: recipeData,
-          owner: recipeData.recipe_owner
+          recipe: this.props.recipe,
+          owner: this.props.recipe_owner
         })
       }
     )

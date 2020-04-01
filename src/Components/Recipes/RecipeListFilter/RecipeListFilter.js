@@ -8,6 +8,9 @@ class RecipeFilter extends Component {
     //Line below to be implemented when I can figure out proper query for the back end. 
     // const { searchTerms, filterOptions, filterOptionsCuisine } = this.props;
     const { searchTerm } = this.props;
+    if (searchTerm === " ") {
+      return 'No matching results'
+    }
     const recipeList = this.props.recipes
 
     
@@ -15,8 +18,12 @@ class RecipeFilter extends Component {
     
     // .filter(recipe => (recipe.recipeType === filterOptions || filterOptions === 'All'))
     //     .filter(recipe => (recipe.cuisineType === filterOptionsCuisine || filterOptionsCuisine === 'All'))
-        .filter(recipe => recipe.ingredients.includes(searchTerm.toLowerCase()))
+    .filter(recipe => {
+      return recipe.ingredients.some(ingredient => 
+        ingredient.toLowerCase().includes(searchTerm.toLowerCase()))
+    })
         .map((recipe, key) => <RecipeDetail {...recipe} key={key} />);
+        
         
         console.log(this.props.recipes);
         // console.log(filterOptions);

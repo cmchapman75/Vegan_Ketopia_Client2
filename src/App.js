@@ -14,7 +14,7 @@ import PantryRoute from "./Routes/PantryRoute/PantryRoute";
 import RecipesRoute from "./Routes/RecipesRoute/RecipesRoute";
 import RecipeSearch from "./Components/Recipes/RecipeSearch/RecipeSearch";
 import RecipeDetail from "./Components/Recipes/RecipeDetail/RecipeDetail";
-import RecipeEdit from "./Components/Recipes/RecipeEdit/RecipeEdit";
+// import RecipeEdit from "./Components/Recipes/RecipeEdit/RecipeEdit";
 import RecipeAdd from "./Components/Recipes/RecipeAdd/RecipeAdd";
 import RecipeList from "./Components/Recipes/RecipeList/RecipeList";
 
@@ -86,11 +86,11 @@ class App extends React.Component {
               path={"/recipes/:recipeId"}
               component={RecipeDetail}
             />
-            <PrivateRoute
+            {/* <PrivateRoute
               exact
               path={"/edit-recipe/:recipeId"}
               component={RecipeEdit}
-            />
+            /> */}
             <PrivateRoute
               exact
               path={"/recipes/search/:recipeId"}

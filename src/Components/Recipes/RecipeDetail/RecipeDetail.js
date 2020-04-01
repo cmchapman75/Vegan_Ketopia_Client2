@@ -30,9 +30,7 @@ export default class DetailedView extends React.Component {
       }
     )
   }
-    // .then(console.log('state is:', this.state.recipe));
-
-
+   
   }
 
   deleteRecipe = () => {
@@ -52,39 +50,39 @@ export default class DetailedView extends React.Component {
       );
     }
   };
+ //Recipe Edit to be implemented later.
+  // ownerOption = () => {
+  //   if (this.context.currentUser.id === this.state.recipe.owner) {
+  //     return (
+  //       <div className="ownerSelectors">
+  //         <Link
+  //           className="RecipeEdit"
+  //           to={{
+  //             pathname: `/edit-recipe/${this.state.recipe.id}`,
+  //             state: this.state,
+  //           }}
 
-  ownerOption = () => {
-    if (this.context.currentUser.id === this.state.recipe.owner) {
-      return (
-        <div className="ownerSelectors">
-          <Link
-            className="RecipeEdit"
-            to={{
-              pathname: `/edit-recipe/${this.state.recipe.id}`,
-              state: this.state,
-            }}
 
+  //         >
+  //           <button className="medButton">Edit Recipe</button>
 
-          >
-            <button className="medButton">Edit Recipe</button>
-
-          </Link>
-        </div>
-      );
-    }
-  };
+  //         </Link>
+  //       </div>
+  //     );
+  //   }
+  // };
 
   render() {
     if (!this.state.recipe) {
       return <div>No recipe found</div>
     }
-    let instructionsArr = []
-    if (this.state.recipe.instuctions) {
-      let desc = this.state.recipe.instructions.slice(2);
-      let desc1 = desc.slice(0, -2);
-      let descarr = desc1.split('","');
-      descarr.map(instruction => instructionsArr.push(instruction))
-    }
+    // let instructionsArr = []
+    // if (this.state.recipe.instuctions) {
+    //   let desc = this.state.recipe.instructions.slice(2);
+    //   let desc1 = desc.slice(0, -2);
+    //   let descarr = desc1.split('","');
+    //   descarr.map(instruction => instructionsArr.push(instruction))
+    // }
     return (
       <div className="view" id="recipeView">        
         <p className="recipePageHeader">Title:</p>
@@ -96,13 +94,14 @@ export default class DetailedView extends React.Component {
         </p>
 
         <p className="recipePageHeader">Recipe Instructions: </p>
-        <div className="recipeInfo">
-          {instructionsArr.map(
-            inst => <p key={inst}>{inst}</p>)}
-        </div>
+        <p className="recipeInfo">
+          {this.state.recipe.instructions &&
+            this.state.recipe.instructions.join(', ')}
+        </p>
+
        
         <div className="buttonGroup">
-          <div>{this.ownerOption()}</div>
+          {/* <div>{this.ownerOption()}</div> */}
           <div>{this.deleteOption()}</div>
           <Link to="/recipes">
             <button className="cancel-view medButton">Cancel</button>

@@ -53,7 +53,7 @@ export default class SearchRecipe extends React.Component {
         .then(recipeResultObj => {
           console.log(recipeResultObj);
           this.setState({
-            searchResults: recipeResultObj,
+            recipes: recipeResultObj,
             error: null            
           });          
         })

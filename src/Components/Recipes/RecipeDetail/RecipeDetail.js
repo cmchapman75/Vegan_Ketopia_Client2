@@ -27,10 +27,8 @@ export default class DetailedView extends React.Component {
           recipe: recipeData
          
         })
-      }
-    )
+      })
   }
-   
   }
 
   deleteRecipe = () => {
@@ -76,17 +74,14 @@ export default class DetailedView extends React.Component {
     if (!this.state.recipe) {
       return <div>No recipe found</div>
     }
-    // let instructionsArr = []
-    // if (this.state.recipe.instuctions) {
-    //   let desc = this.state.recipe.instructions.slice(2);
-    //   let desc1 = desc.slice(0, -2);
-    //   let descarr = desc1.split('","');
-    //   descarr.map(instruction => instructionsArr.push(instruction))
-    // }
+   
     return (
-      <div className="view" id="recipeView">        
+      <div className="view" id="recipeView">  
+              
         <p className="recipePageHeader">Title:</p>
         <p className="recipeInfo">{this.state.recipe.title}</p>
+        <p className="mealTypeInfo">{this.state.recipe.mealType}</p>
+        <p className="cuisineTypeInfo">{this.state.recipe.cuisineType}</p>
         <p className="recipePageHeader">Recipe Ingredients:</p>
         <p className="recipeInfo">
           {this.state.recipe.ingredients &&

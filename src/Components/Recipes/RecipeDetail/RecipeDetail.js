@@ -20,14 +20,16 @@ export default class DetailedView extends React.Component {
 
   componentDidMount() {
     const { recipeId } = this.props.match.params;
+    if (recipeId) {
     RecipeHelper.recipeById(recipeId).then(
       recipeData => {
         this.setState({
-          recipe: this.props.recipe,
-          owner: this.props.recipe_owner
+          recipe: recipeData
+         
         })
       }
     )
+  }
     // .then(console.log('state is:', this.state.recipe));
 
 
@@ -73,6 +75,9 @@ export default class DetailedView extends React.Component {
   };
 
   render() {
+    if (!this.state.recipe) {
+      return <div>No recipe found</div>
+    }
     let instructionsArr = []
     if (this.state.recipe.instuctions) {
       let desc = this.state.recipe.instructions.slice(2);

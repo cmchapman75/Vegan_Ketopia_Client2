@@ -22,7 +22,7 @@ class RecipeFilter extends Component {
       return recipe.ingredients.some(ingredient => 
         ingredient.toLowerCase().includes(searchTerm.toLowerCase()))
     })
-        .map((recipe, key) => <RecipeDetail {...recipe} key={key} />);
+        .map((recipe, key) => <RecipeDetail recipe={recipe} key={key} />);
         
         
         console.log(this.props.recipes);

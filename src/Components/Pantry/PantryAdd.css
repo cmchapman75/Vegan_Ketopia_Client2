@@ -1,16 +1,11 @@
 /* PantryRoute.js */
 
-  /*
-   #F8FFCA Yellow Green
-   #B6D084 Chartreuse
-   #FFCB32 Mimosa
-   #2F7604 Green
-   #141514 Black
-   */
   
   #my-pantry-header {
-    font-size: 40px;
-    font-family: 'cookiesregular';
+    font-size: 30px;
+    font-family: 'Courgette';
+    color: red;
+    text-shadow: 1px 1px 2px rgb(49, 2, 2);
   }
   
   #pantry-router-container {

@@ -10,7 +10,7 @@
 - Christina Chapman
 
 
-## Visit Kitchen Helper:
+## Visit Vegan Ketopia:
 
   * [Client Side Repo]()
 

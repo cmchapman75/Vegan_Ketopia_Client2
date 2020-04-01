@@ -4,6 +4,20 @@
     text-align: center;
     width: 100%;
     height: auto;
-    color: white;
-    background-color: rgb(2, 59, 24);
+    color: rgb(1, 22, 1);
+    background-color: rgb(173, 236, 197);
+    /* background-image: (src\Assets\veganKetopiaBackground.jpg); */
+    /* opacity: 0.3; */
+}
+
+body {
+    
+}
+@media screen and (min-width: 768px) {
+
+}
+
+
+@media screen and (min-width: 1px) {
+
 }

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="account-creation"
+>
+  <header
+    className="creation-header"
+  />
+  <form
+    className="creation-form"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <label
+      className="field-label"
+    >
+      Username:
+    </label>
+    <input
+      className="field-input"
+      name="username"
+      onChange={[Function]}
+      required={true}
+      value=""
+    />
+    <label
+      className="field-label"
+    >
+      Email Address:
+    </label>
+    <input
+      className="field-input"
+      name="email_address"
+      onChange={[Function]}
+      required={true}
+      value=""
+    />
+    <label
+      className="field-label"
+    >
+      Password:
+    </label>
+    <input
+      className="field-input"
+      name="password"
+      onChange={[Function]}
+      required={true}
+      value=""
+    />
+    <div
+      className="button-con"
+    >
+      <button
+        className="medButton"
+        id="create-button"
+      >
+        Create
+      </button>
+      <br />
+      <a
+        href="/Login"
+        onClick={[Function]}
+      >
+        <button
+          className="medButton"
+        >
+          Already a Ketopian?
+        </button>
+      </a>
+    </div>
+  </form>
+</div>
+`;

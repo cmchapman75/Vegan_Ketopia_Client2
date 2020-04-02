@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<section
+  className="recipeSection"
+>
+  <a
+    href="/recipes/search"
+    onClick={[Function]}
+  >
+    <button
+      className="bigButton"
+    >
+      Search for new recipes
+    </button>
+  </a>
+  <p
+    id="no-recipes-in-list"
+  >
+    No recipes are saved yet.
+  </p>
+   
+  <p>
+    Search and find your new favorite recipe or create one.
+  </p>
+</section>
+`;

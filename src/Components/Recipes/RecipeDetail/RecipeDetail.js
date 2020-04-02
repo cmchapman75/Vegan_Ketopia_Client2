@@ -48,33 +48,12 @@ export default class DetailedView extends React.Component {
       );
     }
   };
- //Recipe Edit to be implemented later.
-  // ownerOption = () => {
-  //   if (this.context.currentUser.id === this.state.recipe.owner) {
-  //     return (
-  //       <div className="ownerSelectors">
-  //         <Link
-  //           className="RecipeEdit"
-  //           to={{
-  //             pathname: `/edit-recipe/${this.state.recipe.id}`,
-  //             state: this.state,
-  //           }}
-
-
-  //         >
-  //           <button className="medButton">Edit Recipe</button>
-
-  //         </Link>
-  //       </div>
-  //     );
-  //   }
-  // };
 
   render() {
     if (!this.state.recipe) {
       return <div>No recipe found</div>
     }
-   
+
     return (
       <div className="view" id="recipeView">  
               

@@ -1,14 +1,4 @@
-
-
-  /*
- #F8FFCA Yellow Green
- #B6D084 Chartreuse
- #FFCB32 Mimosa
- #2F7604 Green
- #141514 Black
- */
-
-/* .recipeResults {
+.recipeResults {
     list-style: none;
     margin: 5%;
     font-family: 'Nanum Gothic', sans-serif;
@@ -26,11 +16,11 @@
     font-weight: bold;
 }
 
-/* .individualResult:hover {
+.individualResult:hover {
     background-color: #FFCB32; 
-} */
+} 
 
-/*.searchRecipe {
+.searchRecipe {
     margin: 5%;
 }
 
@@ -45,12 +35,15 @@
 }
 
 #searchButton {
+    margin-top: 10px;
     padding: 10px;
     font-size: 20px;
-    font-family: "Nanum Gothic", sans-serif;
+    background-color: red;
+    color: white;
+    border-radius: 25%;
     font-weight: bold;
 }
 
 .buttonGroupSearch {
     display: flex;
-} */
+}

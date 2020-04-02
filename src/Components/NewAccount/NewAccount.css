@@ -1,0 +1,25 @@
+.account-creation {
+    text-align: center;
+
+}
+
+.creation-form {
+    padding: 1px;
+}
+
+.field-label {
+     
+    /* margin: 2px; */
+}
+
+.field-input {
+    padding: 0 1px;
+}
+
+.medButton {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 25%;
+    color: white;
+    background-color: rgb(2, 61, 2);
+}

@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<section>
+  <div
+    className="login"
+  >
+    <div
+      className="login-fail-error"
+      role="alert"
+    />
+    <header
+      className="Login-Header"
+    />
+    <form
+      className="login-form"
+      onSubmit={[Function]}
+    >
+      <label
+        className="username-fields-label"
+        htmlFor="username"
+      >
+        Username:
+      </label>
+      <input
+        className="inputSmall"
+        id="username"
+        name="username"
+        placeholder="Username"
+        required={true}
+      />
+      <br />
+      <label
+        className="password-fields"
+        htmlFor="password"
+      >
+        Password:
+      </label>
+      <input
+        className="inputSmall"
+        id="password"
+        name="password"
+        placeholder="Password"
+        required={true}
+        type="password"
+      />
+      <h4
+        id="guestlogin"
+      >
+        Are you a guest, please log in with 'Guestuser' and the password of !1asdf@@@M
+      </h4>
+      <div
+        className="btn-row"
+      >
+        <input
+          className="medButton"
+          type="submit"
+          value="Submit"
+        />
+        <br />
+        <a
+          href="/register"
+          onClick={[Function]}
+        >
+          <button
+            className="medButton"
+          >
+            Create an account
+          </button>
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
+`;

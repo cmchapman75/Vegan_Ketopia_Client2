@@ -27,10 +27,8 @@ export default class DetailedView extends React.Component {
           recipe: recipeData
          
         })
-      }
-    )
+      })
   }
-   
   }
 
   deleteRecipe = () => {
@@ -55,11 +53,14 @@ export default class DetailedView extends React.Component {
     if (!this.state.recipe) {
       return <div>No recipe found</div>
     }
-    
+
     return (
-      <div className="view" id="recipeView">        
+      <div className="view" id="recipeView">  
+              
         <p className="recipePageHeader">Title:</p>
         <p className="recipeInfo">{this.state.recipe.title}</p>
+        <p className="mealTypeInfo">{this.state.recipe.mealType}</p>
+        <p className="cuisineTypeInfo">{this.state.recipe.cuisineType}</p>
         <p className="recipePageHeader">Recipe Ingredients:</p>
         <p className="recipeInfo">
           {this.state.recipe.ingredients &&

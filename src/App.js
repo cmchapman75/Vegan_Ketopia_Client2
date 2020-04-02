@@ -15,6 +15,9 @@ import RecipesRoute from "./Routes/RecipesRoute/RecipesRoute";
 import RecipeSearch from "./Components/Recipes/RecipeSearch/RecipeSearch";
 import RecipeDetail from "./Components/Recipes/RecipeDetail/RecipeDetail";
 
+ import RecipeEdit from "./Components/Recipes/RecipeEdit/RecipeEdit";
+ import RecipeAdd from "./Components/Recipes/RecipeAdd/RecipeAdd";
+
 import RecipeList from "./Components/Recipes/RecipeList/RecipeList";
 
 import NotFoundRoute from "./Routes/NotFoundRoute/NotFoundRoute";
@@ -74,12 +77,35 @@ class App extends React.Component {
               exact
               path={"/recipes/search"}
               component={RecipeSearch}
+
+            />
+            {
+            /* To be implemeted when RecipeAdd works properly */
+            /* <PrivateRoute
+              exact
+              path={"/recipes/create"}
+              component={RecipeAdd}
+            /> */}
+
             />            
+
             <PrivateRoute
               exact
               path={"/recipes/:recipeId"}
               component={RecipeDetail}
+
+            />
+            {/*To be implemented when the edit works properly
+            */
+            
+            /* <PrivateRoute
+              exact
+              path={"/edit-recipe/:recipeId"}
+              component={RecipeEdit}
+            /> */}
+
             />            
+
             <PrivateRoute
               exact
               path={"/recipes/search/:recipeId"}

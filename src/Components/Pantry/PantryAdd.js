@@ -70,7 +70,7 @@ export default class FancyModalButton extends Component {
     return (
       <ModalProvider backgroundComponent={this.fadingBackground}>
         <div>
-          <button className="medButton" onClick={this.toggleModal}>Add an ingredient</button>
+          <button className="medButton" onClick={this.toggleModal}>Stock it!</button>
           <this.StyledModal
 
             isOpen={this.state.isOpen}

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Recipe from "../../../Helpers/Recipe";
 import './RecipeAdd.css'
 
-
 export default class RecipeAdd extends React.Component {
   static defaultProps = {
     currentUser: {},
@@ -20,9 +19,10 @@ export default class RecipeAdd extends React.Component {
 
   state = { error: null };
 
-  handleChange  = (event) => {
-    this.setState({value:
-      event.target.value});
+  handleChange = (event) => {    
+    this.setState({
+      [event.target.name]: event.target.value   });
+      console.log(event);
   }
 
   createSubmit = e => {
@@ -80,7 +80,6 @@ export default class RecipeAdd extends React.Component {
               className="field__input a-field__input"
               required
               name="title"
-              placeholder="Title"
               onChange = {this.handleChange}
             />
             <span className="a-field__label-wrap"><span className="a-field__label"></span></span>
@@ -92,7 +91,7 @@ export default class RecipeAdd extends React.Component {
               required
               type="text"
               maxLength="60"
-              name="recipe_ingredients"
+              name="ingredients"
               placeholder="Recipe ingredients"
               onChange = {this.handleChange}
             />
@@ -106,7 +105,7 @@ export default class RecipeAdd extends React.Component {
               required
               type="text"
               maxLength="300"
-              name="recipe_description"
+              name="instructions"
               placeholder="Recipe description"
               onChange = {this.handleChange}
             ></textarea>
@@ -114,8 +113,8 @@ export default class RecipeAdd extends React.Component {
               <span className="a-field__label"></span>
             </span>
           </label>          
-          <label htmlFor="filter_recipeType">
-            Recipe Type:
+          <label htmlFor="filter_recipeType" name="mealType">
+            Meal Type:
             <select className="recipeTypeFilter"
               >
               <option value></option>
@@ -131,7 +130,7 @@ export default class RecipeAdd extends React.Component {
           </label>
         
         <div className="FilterOptions__option">
-          <label htmlFor="filter_cuisineType">
+          <label htmlFor="filter_cuisineType" name="cuisineType">
             Cuisine Type:
             <select>            
                 <option value></option>

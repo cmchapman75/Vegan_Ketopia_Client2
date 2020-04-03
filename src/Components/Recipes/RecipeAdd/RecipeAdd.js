@@ -27,6 +27,7 @@ export default class RecipeAdd extends React.Component {
 
   createSubmit = e => {
     e.preventDefault();
+    console.log(this.state);
     const {
       title,      
       ingredients,
@@ -41,18 +42,18 @@ export default class RecipeAdd extends React.Component {
     // let recipeIngredients = ingredients.value.split(', ');
 
     Recipe.createRecipe({
-      title: title.value,
-      ingredients: ingredients.value.split(', '),
-      instructions: instructions.value.split('. '),      
-      mealType: mealType.value,
-      cuisineType: cuisineType.value
+      title: title,
+      ingredients: ingredients.split(', '),
+      instructions: instructions.split('. '),      
+      mealType: mealType,
+      cuisineType: cuisineType
     })
       .then(res => {
         if (!res.ok) { this.setState({ error: !res.ok }) }
         else {
           title.value = "";
-          instructions.value = "";
           ingredients.value = "";
+          instructions.value = "";          
           mealType.value = "";
           cuisineType.value ="";
           this.handleCreationSuccess();
@@ -92,7 +93,6 @@ export default class RecipeAdd extends React.Component {
               type="text"
               maxLength="60"
               name="ingredients"
-              placeholder="Recipe ingredients"
               onChange = {this.handleChange}
             />
             <span className="a-field__label-wrap">
@@ -106,7 +106,6 @@ export default class RecipeAdd extends React.Component {
               type="text"
               maxLength="300"
               name="instructions"
-              placeholder="Recipe description"
               onChange = {this.handleChange}
             ></textarea>
             <span className="a-field__label-wrap">
@@ -115,8 +114,7 @@ export default class RecipeAdd extends React.Component {
           </label>          
           <label htmlFor="filter_recipeType" name="mealType">
             Meal Type:
-            <select className="recipeTypeFilter"
-              >
+            <select className="typeFilter" name="mealType" onChange={this.handleChange} value={this.state.mealType}>
               <option value></option>
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
@@ -132,7 +130,7 @@ export default class RecipeAdd extends React.Component {
         <div className="FilterOptions__option">
           <label htmlFor="filter_cuisineType" name="cuisineType">
             Cuisine Type:
-            <select>            
+            <select className="typeFilter" name="cuisineType" onChange={this.handleChange} value={this.state.cuisineType}>            
                 <option value></option>
                 <option value="Universal">Universal</option>
                 <option value="American">American</option>

@@ -14,6 +14,16 @@ exports[`renders the UI as expected 1`] = `
       Search for new recipes
     </button>
   </a>
+  <a
+    href="/recipes/create"
+    onClick={[Function]}
+  >
+    <button
+      className="bigButton"
+    >
+      Create new recipe
+    </button>
+  </a>
   <p
     id="no-recipes-in-list"
   >

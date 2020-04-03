@@ -21,8 +21,8 @@ export default class RecipeAdd extends React.Component {
   state = { error: null };
 
   handleChange(event) {
-    // this.setState({value:
-    //   event.target.value});
+    this.setState({value:
+      event.target.value});
   }
 
   createSubmit = e => {
@@ -31,6 +31,8 @@ export default class RecipeAdd extends React.Component {
       title,
       instructions,
       ingredients,
+      mealType, 
+      cuisineType
     } = this.state;
 
     
@@ -42,6 +44,8 @@ export default class RecipeAdd extends React.Component {
       title: title.value,
       instructions: instructions.value.split('. '),
       ingredients: recipeIngredients,
+      mealType: mealType.value,
+      cuisineType: cuisineType.value
     })
       .then(res => {
         if (!res.ok) { this.setState({ error: !res.ok }) }
@@ -49,6 +53,8 @@ export default class RecipeAdd extends React.Component {
           title.value = "";
           instructions.value = "";
           ingredients.value = "";
+          mealType.value = "";
+          cuisineType.value ="";
           this.handleCreationSuccess();
         }
       })
@@ -116,6 +122,47 @@ export default class RecipeAdd extends React.Component {
               <button className="medButton">Cancel</button>
             </Link>
           </div>
+          <label htmlFor="filter_recipeType">
+            Recipe Type:
+            <select className="recipeTypeFilter"
+              >
+              <option value></option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="dessert">Dessert</option>
+              <option value="snack">Snack</option>
+              <option value="Breads and Crackers">Breads and Crackers</option>
+              <option value="Side Dish">Side Dish</option>
+              <option value="fat-bombs">Fat Bombs</option>
+            </select>
+          </label>
+        
+        <div className="FilterOptions__option">
+          <label htmlFor="filter_cuisineType">
+            Cuisine Type:
+            <select>            
+                <option value></option>
+                <option value="Universal">Universal</option>
+                <option value="American">American</option>
+                <option value="Chinese">Chinese</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Greek">Greek</option>
+                <option value="Indian">Indian</option>
+                <option value="Irish">Irish</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>                        
+                <option value="Korean">Korean</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Middle Eastern">Middle Eastern</option>
+                <option value="Russian">Russian</option>                        
+                <option value="Spanish">Spanish</option>               
+                <option value="Thai">Thai</option>
+                <option value="Vietnamese">Vietnamese</option>   
+            </select>
+          </label>
+          </div> 
         </form>
       </div>
     );

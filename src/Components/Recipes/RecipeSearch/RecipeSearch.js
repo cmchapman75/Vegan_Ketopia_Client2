@@ -32,7 +32,7 @@ export default class SearchRecipe extends React.Component {
     // let searchTerms = searchArray.join(',+')
     this.setState({ error: null });
     const searchInput = this.state.searchTerm;
-    const baseUrl = `${config.API_ENDPOINT}/api/recipes/`;
+    const baseUrl = `${config.API_ENDPOINT}/api/recipes/search`;
     const authToken = TokenService.getAuthToken();
     //create full url from all search terms.
     const fullSearchUrl = this.fullQuery(baseUrl, searchInput);

@@ -78,16 +78,13 @@ class App extends React.Component {
               path={"/recipes/search"}
               component={RecipeSearch}
 
-            />
-            {
-            /* To be implemeted when RecipeAdd works properly */
-            /* <PrivateRoute
+            />          
+          
+            <PrivateRoute
               exact
               path={"/recipes/create"}
               component={RecipeAdd}
-            /> */}
-
-            />            
+            />                   
 
             <PrivateRoute
               exact
@@ -95,16 +92,12 @@ class App extends React.Component {
               component={RecipeDetail}
 
             />
-            {/*To be implemented when the edit works properly
-            */
             
-            /* <PrivateRoute
+           <PrivateRoute
               exact
               path={"/edit-recipe/:recipeId"}
               component={RecipeEdit}
-            /> */}
-
-            />            
+            />          
 
             <PrivateRoute
               exact

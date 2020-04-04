@@ -37,8 +37,8 @@ export default class SearchRecipe extends React.Component {
           recipeId: recipeId,
           ingredients: recipe.Ingredients,
           instructions: recipe.Instructions,
-          mealType: recipe.mealType,
-          cuisineType: recipe.cuisineType
+          meal_type: recipe.meal_type,
+          cuisine_type: recipe.cuisine_type
 
         });
       })
@@ -56,8 +56,8 @@ export default class SearchRecipe extends React.Component {
   addRecipe = () => {
     let instructionsSet = [];
     let ingredientsSet = [];
-    let mealType = '';
-    let cuisineType = '';
+    let meal_type = '';
+    let cuisine_type = '';
     if (this.state.instructions) {
       this.state.instructions.steps.map(instruction =>
         instructionsSet.push(instruction.step)
@@ -71,8 +71,8 @@ export default class SearchRecipe extends React.Component {
       title: this.state.recipe.title,
       recipe_description: instructionsSet,
       recipe_ingredients: ingredientsSet,
-      mealType: mealType,
-      cuisineType: cuisineType
+      meal_type: meal_type,
+      cuisine_type: cuisine_type
 
     };
     RecipeHelper.createRecipe(recipeObj)

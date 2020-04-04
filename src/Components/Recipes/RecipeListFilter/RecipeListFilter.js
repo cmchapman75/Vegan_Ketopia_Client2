@@ -6,8 +6,8 @@ class RecipeFilter extends Component {
   //runs the filters and mapping over the recipes table in the database--child of RecipeSearch
   render() {
     //Line below to be implemented when I can figure out proper query for the back end. 
-    // const { searchTerms, filterOptions, filterOptionsCuisine } = this.props;
-    const { searchTerm } = this.props;
+    const { searchTerm, filterOptions, filterOptionsCuisine } = this.props;
+    // const { searchTerm } = this.props;
     if (searchTerm === " ") {
       return 'No matching results'
     }
@@ -16,8 +16,8 @@ class RecipeFilter extends Component {
     
     //Filters below to be implemented when I can figure out proper query for the back end. 
     
-    // .filter(recipe => (recipe.recipeType === filterOptions || filterOptions === 'All'))
-    //     .filter(recipe => (recipe.cuisineType === filterOptionsCuisine || filterOptionsCuisine === 'All'))
+    .filter(recipe => (recipe.recipeType === filterOptions || filterOptions === 'All'))
+        .filter(recipe => (recipe.cuisine_type === filterOptionsCuisine || filterOptionsCuisine === 'All'))
     .filter(recipe => {
       return recipe.ingredients.some(ingredient => 
         ingredient.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -26,8 +26,8 @@ class RecipeFilter extends Component {
         
         
         console.log(this.props.recipes);
-        // console.log(filterOptions);
-        // console.log(filterOptionsCuisine);
+        console.log(filterOptions);
+        console.log(filterOptionsCuisine);
     return (
       <div className="FilterableList">
         {recipeList}

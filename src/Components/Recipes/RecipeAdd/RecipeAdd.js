@@ -32,8 +32,8 @@ export default class RecipeAdd extends React.Component {
       title,      
       ingredients,
       instructions,
-      mealType, 
-      cuisineType
+      meal_type, 
+      cuisine_type
     } = this.state;
 
     
@@ -45,8 +45,8 @@ export default class RecipeAdd extends React.Component {
       title: title,
       ingredients: ingredients.split(', '),
       instructions: instructions.split('. '),      
-      mealType: mealType,
-      cuisineType: cuisineType
+      meal_type: meal_type,
+      cuisine_type: cuisine_type
     })
       .then(res => {
         if (!res.ok) { this.setState({ error: !res.ok }) }
@@ -54,8 +54,8 @@ export default class RecipeAdd extends React.Component {
           title.value = "";
           ingredients.value = "";
           instructions.value = "";          
-          mealType.value = "";
-          cuisineType.value ="";
+          meal_type.value = "";
+          cuisine_type.value ="";
           this.handleCreationSuccess();
         }
       })
@@ -112,9 +112,9 @@ export default class RecipeAdd extends React.Component {
               <span className="a-field__label"></span>
             </span>
           </label>          
-          <label htmlFor="filter_recipeType" name="mealType">
+          <label htmlFor="filter_recipeType" name="meal_type">
             Meal Type:
-            <select className="typeFilter" name="mealType" onChange={this.handleChange} value={this.state.mealType}>
+            <select className="typeFilter" name="meal_type" onChange={this.handleChange} value={this.state.meal_type}>
               <option value></option>
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
@@ -128,9 +128,9 @@ export default class RecipeAdd extends React.Component {
           </label>
         
         <div className="FilterOptions__option">
-          <label htmlFor="filter_cuisineType" name="cuisineType">
+          <label htmlFor="filter_cuisine_type" name="cuisine_type">
             Cuisine Type:
-            <select className="typeFilter" name="cuisineType" onChange={this.handleChange} value={this.state.cuisineType}>            
+            <select className="typeFilter" name="cuisine_type" onChange={this.handleChange} value={this.state.cuisine_type}>            
                 <option value></option>
                 <option value="Universal">Universal</option>
                 <option value="American">American</option>

@@ -4,20 +4,29 @@
     text-align: center;
     width: 100%;
     height: auto;
+    font-size: 16px;
     color: rgb(1, 22, 1);
-    background-color: rgb(173, 236, 197);
-    /* background-image: (src\Assets\veganKetopiaBackground.jpg); */
-    /* opacity: 0.3; */
+    /* background-color: rgb(173, 236, 197) opacity 0.3; */
+    background-image:  url('./Assets/veganKetopiaBackground.jpg');
 }
 
-body {
+/* body {
     
-}
+} */
 @media screen and (min-width: 768px) {
-
+.App {
+    width: 95%;
+    font-size: 115%;
+    text-align: center;
+}
 }
 
 
-@media screen and (min-width: 1px) {
+@media screen and (min-width: 1028px) {
 
+    .App {
+        width: 95%;
+        font-size: 125%;
+        text-align: center;
+    }
 }

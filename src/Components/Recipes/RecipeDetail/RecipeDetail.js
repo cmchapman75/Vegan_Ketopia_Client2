@@ -59,8 +59,8 @@ export default class DetailedView extends React.Component {
               
         <p className="recipePageHeader">Title:</p>
         <p className="recipeInfo">{this.state.recipe.title}</p>
-        <p className="mealTypeInfo">{this.state.recipe.mealType}</p>
-        <p className="cuisineTypeInfo">{this.state.recipe.cuisineType}</p>
+        <p className="meal_typeInfo">{this.state.recipe.meal_type}</p>
+        <p className="cuisine_typeInfo">{this.state.recipe.cuisine_type}</p>
         <p className="recipePageHeader">Recipe Ingredients:</p>
         <p className="recipeInfo">
           {this.state.recipe.ingredients &&

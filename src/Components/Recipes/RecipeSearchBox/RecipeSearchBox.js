@@ -5,13 +5,16 @@ import './RecipeSearchBox.css';
 
 //contains the ingredient search feature for Recipe Search
 class RecipeSearchBox extends Component {
+  
   render() {
     return (
       <div className="searchRecipe" id="SearchBox">
-        <form className="searchArea" onSubmit={e => 
-                this.props.handleSubmit(e)}>
-          <label htmlFor="ingredient-search">Search: </label>
-         
+        <form 
+            className="searchArea" 
+            onSubmit={e => 
+            this.props.handleSubmit(e)}>
+           
+          <label htmlFor="ingredient-search">Search: </label>         
           <input 
             type="text"
             name="ingredient_search"
@@ -20,10 +23,9 @@ class RecipeSearchBox extends Component {
             value={this.props.term}
             onChange={e => 
                 this.props.handleUpdate(e.target.value)}/>
-                <br></br>
-           <button 
-             id="searchButton" 
-             type="submit">Submit</button>  
+          <button 
+            id="searchButton" 
+            type="submit">Search</button>         
          </form>
       </div>   
     );

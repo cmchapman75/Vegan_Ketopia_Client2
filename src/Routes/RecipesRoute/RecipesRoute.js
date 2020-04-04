@@ -21,21 +21,21 @@ class RecipesRoute extends Component {
 
   getRecipes = () => {   
     console.log("Working!!")
-    const url = `${config.API_ENDPOINT}/api/recipes`;
-    const authToken = TokenService.getAuthToken();
-    fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: `Bearer ${authToken}`
-      }
-    })
-      .then(res => res.json())
-      .then(data => {
-        return this.setState({
-          recipes: data
-        });
-      });
+    // const url = `${config.API_ENDPOINT}/api/recipes`;
+    // const authToken = TokenService.getAuthToken();
+    // fetch(url, {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //     Authorization: `Bearer ${authToken}`
+    //   }
+    // })
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     return this.setState({
+    //       recipes: data
+    //     });
+    //   });
   };
 
   setStateErrorTrue = () => {

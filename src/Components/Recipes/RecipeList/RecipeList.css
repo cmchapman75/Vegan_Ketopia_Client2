@@ -1,0 +1,23 @@
+.recipeTitleHeader {
+    font-family: 'Courgette', cursive;
+    color: red;
+    font-size: 35px;
+    text-shadow: 1px 2px 2px rgb(3, 3, 3); 
+}
+
+.recipeHeaders {
+    font-family: 'Courgette', cursive;
+    color: red;
+    font-size: 35px;
+    text-shadow: 1px 2px 2px rgb(3, 3, 3); 
+}
+
+.recipeTitle {
+    color: red;
+
+}
+
+
+.recipeInfo {
+    margin: 5px;
+}

@@ -113,7 +113,7 @@ export default class SearchRecipe extends React.Component {
           {this.state.recipes.map(recipe => <li key={recipe.id}>
             <Link className="individualResult"
               to={{
-                pathname: `/recipes/search/${recipe.id}`,
+                pathname: `/recipes/${recipe.id}`,
                 state: {
                   recipeId: recipe.id
                 }

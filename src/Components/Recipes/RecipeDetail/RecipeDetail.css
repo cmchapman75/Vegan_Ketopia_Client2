@@ -8,14 +8,29 @@
  #141514 Black
  */
 
-/* .recipePageHeader {
-    font-size: 30px;
-    font-family: 'cookiesregular';
+ .recipePageHeader {
+    font-family: 'Courgette', cursive;
+    color: red;
+    font-size: 35px;
+    text-shadow: 1px 2px 2px rgb(3, 3, 3); 
+}
+
+
+.meal_typeInfo, .cuisine_typeInfo {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.recipeHeaders {
+    font-family: 'Courgette', cursive;
+    color: red;
+    font-size: 22px;
+    text-shadow: 1px 2px 2px rgb(3, 3, 3); 
 }
 
 .recipeInfo {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     padding-left: 5%;
 }
 
@@ -33,10 +48,10 @@
 .a-field {
     font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
-} */
+}
 
-/* @media screen and (max-width: 720px) {
+@media screen and (min-width: 720px) {
     .instructions {
-        font-size: 16px;
+        font-size: 125%;
     }
-} */ 
+} 

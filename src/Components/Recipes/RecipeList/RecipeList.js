@@ -2,6 +2,7 @@ import React from "react";
 import RecipeHelper from "../../../Helpers/Recipe";
 import TokenService from '../../../Helpers/Token'
 import config from '../../../config';
+import './RecipeList.css';
 import _ from "lodash";
 
 
@@ -109,9 +110,9 @@ export default class SearchRecipe extends React.Component {
             style={{ backgroundImage: `url(${this.state.recipe.image})` }}
           /> */}
         </div>
-        <p className="recipePageHeader">Title:</p>
-        <p className="recipeInfo">{this.state.recipe.title}</p>
-        <p className="recipePageHeader">Recipe Ingredients:</p>
+        <p className="recipeTitleHeader">Recipe:</p>
+        <p className="recipeTitle">{this.state.recipe.title}</p>
+        <p className="recipeHeaders">Recipe Ingredients:</p>
         <p className="recipeInfo">
           {this.state.ingredients &&
             this.state.ingredients.map(ingredient => `${ingredient.name}, `)}
@@ -125,8 +126,8 @@ export default class SearchRecipe extends React.Component {
         </section>
         
         <div className="buttonGroupSearch">
-          <button className="medButton" onClick={this.addRecipe}>Add to my recipes!</button>
-          <button className="medButton" onClick={this.backToSearch}>Cancel</button>
+          <button className="medButton" onClick={this.addRecipe}>Add It!</button>
+          <button className="medButton" onClick={this.backToSearch}>Back</button>
         </div>
       </div>
     );

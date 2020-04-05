@@ -134,6 +134,7 @@ export default class SearchRecipe extends React.Component {
     // const { recipes, searchTerm } = this.state;
     return (
       <div className="searchRecipe">
+        <h1>Recipe Search</h1>
         <p id="larger-search-text">Search our delicious and cruelty free recipes!</p>
         <p id="recipe-search-text">
           For best results, please use whole words as search terms. <br />Please use one search term at a time.
@@ -147,7 +148,9 @@ export default class SearchRecipe extends React.Component {
         <RecipeSearchBox 
           handleSubmit={this.handleSubmit}
           handleUpdate={term => this.updateSearchTerm(term)} />
-        
+        <Link to="/recipes">
+              <button className="medButton">Cancel</button>
+        </Link>
         {/* <RecipeListFilter 
           recipes={recipes}
           searchTerm={searchTerm}

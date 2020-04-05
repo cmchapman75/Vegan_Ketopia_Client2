@@ -70,7 +70,7 @@ export default class RecipeAdd extends React.Component {
 
       <div className="Creation">
         <header className="Creation-Header" id="add-recipe-header">
-          New Recipe
+          <h1>New Recipe</h1>
         </header>
         <form className="Creation-Form" onSubmit={this.createSubmit}>
           {error && <p className="empty-fields-error-message">Fields cannot be empty. Please try again.</p>}
@@ -115,7 +115,7 @@ export default class RecipeAdd extends React.Component {
           <label htmlFor="filter_recipeType" name="meal_type">
             Meal Type:
             <br></br>
-            <select className="typeFilter" name="meal_type" onChange={this.handleChange} value={this.state.meal_type}>
+            <select className="dropDown" name="meal_type" onChange={this.handleChange} value={this.state.meal_type}>
               <option value></option>
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
@@ -132,7 +132,7 @@ export default class RecipeAdd extends React.Component {
           <label htmlFor="filter_cuisine_type" name="cuisine_type">
             Cuisine Type:
             <br></br>
-            <select className="typeFilter" name="cuisine_type" onChange={this.handleChange} value={this.state.cuisine_type}>            
+            <select className="dropDown" name="cuisine_type" onChange={this.handleChange} value={this.state.cuisine_type}>            
                 <option value></option>
                 <option value="Universal">Universal</option>
                 <option value="American">American</option>
@@ -155,7 +155,7 @@ export default class RecipeAdd extends React.Component {
           </label>
           <div className="btn-row">
             <div>
-              <button className="medButton" type="submit">Create recipe</button>
+              <button className="medButton" type="submit">Create It!</button>
             </div>
             <Link to="/recipes">
               <button className="medButton">Cancel</button>

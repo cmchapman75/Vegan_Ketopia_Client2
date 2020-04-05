@@ -1,0 +1,11 @@
+.cuisine_typeFilter, .recipe_typeFilter {
+    height: 25px;
+    font-size: 20px;
+    padding-top: 5px;
+    width: 280px;
+    margin-top: 1.5%;
+}
+
+.cuisine_typeFilter {
+    padding-bottom: -5px;;
+}

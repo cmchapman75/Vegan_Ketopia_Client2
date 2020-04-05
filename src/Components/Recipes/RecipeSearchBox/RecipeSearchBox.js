@@ -26,7 +26,7 @@ class RecipeSearchBox extends Component {
                 this.props.handleUpdate(e.target.value)}/>
                 <br></br>
           <button 
-            id="searchButton" 
+            className="medButton" 
             type="submit">Search</button>         
          </form>
       </div>   

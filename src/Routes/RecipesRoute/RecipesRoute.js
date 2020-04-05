@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import config from "../../config";
-// import TokenService from "../../Helpers/Token";
+import config from "../../config";
+import TokenService from "../../Helpers/Token";
 import "./RecipesRoute.css";
 
 class RecipesRoute extends Component {
@@ -21,21 +21,21 @@ class RecipesRoute extends Component {
 
   getRecipes = () => {   
     console.log("Working!!")
-    // const url = `${config.API_ENDPOINT}/api/recipes`;
-    // const authToken = TokenService.getAuthToken();
-    // fetch(url, {
-    //   method: "GET",
-    //   headers: {
-    //     "Content-type": "application/json",
-    //     Authorization: `Bearer ${authToken}`
-    //   }
-    // })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     return this.setState({
-    //       recipes: data
-    //     });
-    //   });
+    const url = `${config.API_ENDPOINT}/api/recipes`;
+    const authToken = TokenService.getAuthToken();
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${authToken}`
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        return this.setState({
+          recipes: data
+        });
+      });
   };
 
   setStateErrorTrue = () => {
@@ -69,10 +69,10 @@ class RecipesRoute extends Component {
     return (
       <section className="recipeSection">
         <Link to="recipes/search">
-          <button className="bigButton">Search for new recipes</button>
+          <button className="bigButton">Search It!</button>
         </Link>
         <Link to="recipes/create">
-          <button className="bigButton">Create new recipe</button>
+          <button className="bigButton">Create It!</button>
         </Link>
         {this.state.recipes.length === 0 ? <><p id="no-recipes-in-list">No recipes are saved yet.</p> <p>Search and find your new favorite recipe or create one.</p></> : <h1 id="recipeHeader">My Recipes:</h1>}
         {this.state.recipes && this.renderRecipes()}

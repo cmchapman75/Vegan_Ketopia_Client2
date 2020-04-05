@@ -158,7 +158,7 @@ class PantryRoute extends Component {
       <section id="pantry-router-container">
         <h2 id="my-pantry-header">My Pantry</h2>
         <p id="pantry-text">
-          Keep track of the ingredients in your kitchen!
+          Keep track of the ingredients in your pantry!
         </p>
         <form onSubmit={this.handleSearchSubmit} className="pantrySearch">
           <label
@@ -174,7 +174,7 @@ class PantryRoute extends Component {
             onChange={this.handleInput.bind(this)}
           ></input>
           <br></br>
-          <button type="submit" className="smallButton">Search</button>
+          <button type="submit" className="medButton">Search It!</button>
         </form>
         <p className="randomLabel">Filter by:</p>
         <select id="pantry-filter" className="dropDown" onChange={(e) => this.setFilterOption(e)}>

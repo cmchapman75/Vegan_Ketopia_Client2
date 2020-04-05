@@ -1,22 +1,35 @@
 .App {
     box-sizing: border-box;
-    padding:  0 15px;
     text-align: center;
     width: 100%;
     height: auto;
     font-size: 16px;
     color: rgb(1, 22, 1);
-    /* background-color: rgb(173, 236, 197) opacity 0.3; */
-    background-image:  url('./Assets/veganKetopiaBackground.jpg') 0 0 no-repeat;
+    /* background-color: rgb(173, 236, 197, 0.3) ; */
+    background-image:  url('./Assets/veganKetopiaBackground.jpg');
+    background-size: cover;
 }
 
+main{
+    background-color: rgb(173, 236, 197, 0.8);
+}
+.medButton {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 25%;
+    font-weight: bold;
+}
 /* body {
     
 } */
 @media screen and (min-width: 768px) {
 .App {
     width: 95%;
-    font-size: 115%;
+    font-size: 125%;
+    font-weight: 600;
     text-align: center;
 }
 }
@@ -26,7 +39,8 @@
 
     .App {
         width: 95%;
-        font-size: 125%;
+        font-size: 145%;
+        font-weight: bolder;
         text-align: center;
     }
 }

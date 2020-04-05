@@ -46,14 +46,23 @@
     vertical-align: middle;
   }
   
-   #dashboard-links-list {
+  #dashboard-links-list {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding-right: 12.5%;
-    margin: auto; 
-   } 
+    padding-right: 15%; 
+    /* margin: auto; */
+  } 
    
+  @media screen and (nim-width: 425px) {
+    #dashboard-links-list {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+  }
+
   @media screen and (min-width: 700px){
   
      .dashboard {
@@ -76,7 +85,7 @@
       text-align: center;
       justify-content: center;
       align-items: center;
-      padding-right: 5.2%;
+      padding-right: 4.5%;
       margin: auto;
   }
   
@@ -93,7 +102,7 @@
       text-align: center;
       justify-content: center;
       align-items: center;
-      padding-right: 5.2%; 
+      padding-right: 5.6%; 
       /* margin: auto; */
     }
   }  

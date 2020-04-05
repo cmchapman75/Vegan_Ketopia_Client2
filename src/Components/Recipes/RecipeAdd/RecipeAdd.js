@@ -70,7 +70,7 @@ export default class RecipeAdd extends React.Component {
 
       <div className="Creation">
         <header className="Creation-Header" id="add-recipe-header">
-          <h1>New Recipe</h1>
+          <h2>New Recipe</h2>
         </header>
         <form className="Creation-Form" onSubmit={this.createSubmit}>
           {error && <p className="empty-fields-error-message">Fields cannot be empty. Please try again.</p>}
@@ -158,7 +158,7 @@ export default class RecipeAdd extends React.Component {
               <button className="medButton" type="submit">Create It!</button>
             </div>
             <Link to="/recipes">
-              <button className="medButton">Cancel</button>
+              <button className="medButton">Back</button>
             </Link>
           </div>
           </div> 

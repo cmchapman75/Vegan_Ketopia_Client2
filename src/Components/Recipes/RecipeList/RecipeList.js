@@ -1,5 +1,6 @@
 import React from "react";
 import RecipeHelper from "../../../Helpers/Recipe";
+import TokenService from '../../../Helpers/Token'
 import config from '../../../config';
 import _ from "lodash";
 
@@ -24,14 +25,21 @@ export default class SearchRecipe extends React.Component {
   getRecipeInstructions = () => {
     let recipeId = _.get(this, "props.location.state.recipeId");
     let URL = `${config.API_ENDPOINT}/api/recipes/${recipeId}`;
+    const authToken = TokenService.getAuthToken();
 
-    fetch(URL)
+    fetch(URL,  {      
+      headers: {
+        "content-type": "application/json",        
+        'Authorization': `Bearer ${authToken}`
+      }      
+    })          
       .then(res => {
+        // console.log(res);
         if (!res.ok) {
           throw new Error(res.statusText);
-        }
-        return res.json();
-      })
+        }        
+        return res.json();        
+      })        
       .then(recipe => {
         this.setState({
           recipe: recipe,

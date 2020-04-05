@@ -19,8 +19,7 @@ export default class SearchRecipe extends React.Component {
       recipes: [],
       searchTerm: '',
       filterOptions: '',
-      filterOptionsCuisine: '',
-      searchResults: []
+      filterOptionsCuisine: ''
     };
   }
 
@@ -134,7 +133,7 @@ export default class SearchRecipe extends React.Component {
     // const { recipes, searchTerm } = this.state;
     return (
       <div className="searchRecipe">
-        <h1>Recipe Search</h1>
+        <h2>Recipe Search</h2>
         <p id="larger-search-text">Search our delicious and cruelty free recipes!</p>
         <p id="recipe-search-text">
           For best results, please use whole words as search terms. <br />Please use one search term at a time.
@@ -149,7 +148,7 @@ export default class SearchRecipe extends React.Component {
           handleSubmit={this.handleSubmit}
           handleUpdate={term => this.updateSearchTerm(term)} />
         <Link to="/recipes">
-              <button className="medButton">Cancel</button>
+              <button className="medButton">Back</button>
         </Link>
         {/* <RecipeListFilter 
           recipes={recipes}

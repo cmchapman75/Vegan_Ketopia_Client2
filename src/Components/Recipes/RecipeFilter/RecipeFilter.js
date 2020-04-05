@@ -10,6 +10,7 @@ class RecipeFilter extends Component {
         <div className="FilterOptions__option">
           <label htmlFor="filter_recipeType">
             Recipe Type:
+            <br></br>
             <select className="recipeTypeFilter"
               // checked={filterOptions === "All"}
               onChange={e => handleFilterChange(e.target.value)}>
@@ -28,6 +29,7 @@ class RecipeFilter extends Component {
         <div className="FilterOptions__option">
           <label htmlFor="filter_cuisine_type">
             Cuisine Type:
+            <br></br>
             <select className="cuisine_typeFilter"
                 // checked={filterOptionsCuisine === "All"}
                 onChange={e => handleFilterChangeCuisine(e.target.value)}>

@@ -140,12 +140,14 @@ export default class SearchRecipe extends React.Component {
         </p>
         <br />
         
-        <RecipeSearchBox 
-          handleSubmit={this.handleSubmit}
-          handleUpdate={term => this.updateSearchTerm(term)} />
+
         <RecipeFilter
           handleFilterChange={options => this.updateFilterOptions(options)}
           handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)} />
+        <RecipeSearchBox 
+          handleSubmit={this.handleSubmit}
+          handleUpdate={term => this.updateSearchTerm(term)} />
+        
         {/* <RecipeListFilter 
           recipes={recipes}
           searchTerm={searchTerm}

@@ -14,7 +14,8 @@ class RecipeSearchBox extends Component {
             onSubmit={e => 
             this.props.handleSubmit(e)}>
            
-          <label htmlFor="ingredient-search">Search: </label>         
+          <label htmlFor="ingredient-search">Search: </label>
+           <br></br>        
           <input 
             type="text"
             name="ingredient_search"
@@ -23,6 +24,7 @@ class RecipeSearchBox extends Component {
             value={this.props.term}
             onChange={e => 
                 this.props.handleUpdate(e.target.value)}/>
+                <br></br>
           <button 
             id="searchButton" 
             type="submit">Search</button>         

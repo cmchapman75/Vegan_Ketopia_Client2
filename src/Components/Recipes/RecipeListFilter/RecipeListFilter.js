@@ -16,16 +16,14 @@ class RecipeFilter extends Component {
     
     //Filters below to be implemented when I can figure out proper query for the back end. 
     
-    .filter(recipe => (recipe.recipeType === filterOptions || filterOptions === 'All'))
+    .filter(recipe => (recipe.meal_type === filterOptions || filterOptions === 'All'))
         .filter(recipe => (recipe.cuisine_type === filterOptionsCuisine || filterOptionsCuisine === 'All'))
     .filter(recipe => {
       return recipe.ingredients.some(ingredient => 
         ingredient.toLowerCase().includes(searchTerm.toLowerCase()))
     })
         .map((recipe, key) => <RecipeDetail recipe={recipe} key={key} />);
-        
-        
-        console.log(this.props.recipes);
+                
         console.log(filterOptions);
         console.log(filterOptionsCuisine);
     return (

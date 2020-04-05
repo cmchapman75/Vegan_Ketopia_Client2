@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // import Header from '../../Header/Header'
 import RecipeSearchBox from '../RecipeSearchBox/RecipeSearchBox'
 import RecipeFilter from '../RecipeFilter/RecipeFilter'
-import RecipeListFilter from '../RecipeListFilter/RecipeListFilter'
+// import RecipeListFilter from '../RecipeListFilter/RecipeListFilter'
 
 import './RecipeSearch.css';
 
@@ -32,7 +32,7 @@ export default class SearchRecipe extends React.Component {
     // let searchTerms = searchArray.join(',+')
     this.setState({ error: null });
     const searchInput = this.state.searchTerm;
-    const baseUrl = `${config.API_ENDPOINT}/api/recipes/`;
+    const baseUrl = `${config.API_ENDPOINT}/api/recipes/search`;
     const authToken = TokenService.getAuthToken();
     //create full url from all search terms.
     const fullSearchUrl = this.fullQuery(baseUrl, searchInput);
@@ -128,7 +128,7 @@ export default class SearchRecipe extends React.Component {
   // }
 
   displaySearchResults = () => {
-    if (this.state.searchResults.length === 0) {
+    if (this.state.recipes.length === 0) {
       return;
     }
     else {
@@ -154,8 +154,8 @@ export default class SearchRecipe extends React.Component {
   render() {
 
     //Line below to be implemented when I can figure out correct query for server.
-    const { recipes, searchTerm, filterOptions, filterOptionsCuisine } = this.state;
-    // const { recipes, searchTerm } = this.state;
+    // const { recipes, searchTerm, filterOptions, filterOptionsCuisine } = this.state;
+    const { recipes, searchTerm } = this.state;
     return (
       <div className="searchRecipe">
         <p id="larger-search-text">Search our delicious and cruelty free recipes!</p>
@@ -170,13 +170,13 @@ export default class SearchRecipe extends React.Component {
         <RecipeFilter
           handleFilterChange={options => this.updateFilterOptions(options)}
           handleFilterChangeCuisine={optionsCuisine => this.updateFilterOptionsCuisine(optionsCuisine)} />
-        <RecipeListFilter 
+        {/* <RecipeListFilter 
           recipes={recipes}
           searchTerm={searchTerm}
           //To be implemented later.
            filterOptions={filterOptions}
           filterOptionsCuisine={filterOptionsCuisine} 
-          />
+          /> */}
     
          <section className="recipeResults">
           {this.displaySearchResults()}

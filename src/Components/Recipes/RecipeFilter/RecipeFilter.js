@@ -13,7 +13,7 @@ class RecipeFilter extends Component {
             <select className="recipeTypeFilter"
               // checked={filterOptions === "All"}
               onChange={e => handleFilterChange(e.target.value)}>
-              <option value></option>
+              <option value="all"></option>
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
@@ -31,7 +31,7 @@ class RecipeFilter extends Component {
             <select className="cuisine_typeFilter"
                 // checked={filterOptionsCuisine === "All"}
                 onChange={e => handleFilterChangeCuisine(e.target.value)}>
-                <option value></option>
+                <option value="all"></option>
                 <option value="Universal">Universal</option>
                 <option value="American">American</option>
                 <option value="Chinese">Chinese</option>

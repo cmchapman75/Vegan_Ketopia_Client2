@@ -43,7 +43,6 @@ class NewAccount extends Component {
             password: password.value
           })
             .then(user => {
-              console.log("AWDOIAJWD");
               username.value = "";
               email_address.value = "";
               password.value = "";

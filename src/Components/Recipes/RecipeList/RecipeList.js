@@ -1,5 +1,6 @@
 import React from "react";
 import RecipeHelper from "../../../Helpers/Recipe";
+import config from '../../../config';
 import _ from "lodash";
 
 
@@ -22,7 +23,7 @@ export default class SearchRecipe extends React.Component {
 
   getRecipeInstructions = () => {
     let recipeId = _.get(this, "props.location.state.recipeId");
-    let URL = `http://localhost:8000/api/recipes/${recipeId}`;
+    let URL = `${config.API_ENDPOINT}/api/recipes/${recipeId}`;
 
     fetch(URL)
       .then(res => {

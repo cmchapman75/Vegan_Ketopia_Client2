@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import config from "../../config";
-import TokenService from "../../Helpers/Token";
+// import config from "../../config";
+// import TokenService from "../../Helpers/Token";
 import "./RecipesRoute.css";
 
 class RecipesRoute extends Component {

@@ -66,10 +66,8 @@ export default class SearchRecipe extends React.Component {
 
   fullQuery = (baseURL, searchInput ) => {
     console.log(searchInput);
-    // add key later
     const { filterOptions, filterOptionsCuisine } = this.state;
-    let queryParams = [];
-    
+    let queryParams = [];    
     if (searchInput !== "") {
       queryParams.push("q=" + searchInput);
      }
@@ -81,7 +79,6 @@ export default class SearchRecipe extends React.Component {
      }    
     let fullQuery = queryParams.join("&");
     const fullUrl = baseURL + "?" + fullQuery;
-    // console.log(fullQuery);
     return fullUrl;
   };
 
@@ -105,28 +102,7 @@ export default class SearchRecipe extends React.Component {
     })
     console.log(optionsCuisine);
   }
-
-  // updateSearchTerm(e) {
-  //   e.preventDefault();
-  //   this.setState({
-  //     searchTerms: e.target.value
-  //   });   
-  // }
-  
-  // updateFilterOptions(e) {
-  //   e.preventDefault();
-  //   this.setState({
-  //     filterOptions: e.target.value     
-  //   })
-  // }
-  
-  // updateFilterOptionsCuisine(e) {
-  //   e.preventDefault();
-  //   this.setState({
-  //     filterOptionsCuisine: e.target.value   
-  //   })
-  // }
-
+ 
   displaySearchResults = () => {
     if (this.state.recipes.length === 0) {
       return;
@@ -155,7 +131,7 @@ export default class SearchRecipe extends React.Component {
 
     //Line below to be implemented when I can figure out correct query for server.
     // const { recipes, searchTerm, filterOptions, filterOptionsCuisine } = this.state;
-    const { recipes, searchTerm } = this.state;
+    // const { recipes, searchTerm } = this.state;
     return (
       <div className="searchRecipe">
         <p id="larger-search-text">Search our delicious and cruelty free recipes!</p>

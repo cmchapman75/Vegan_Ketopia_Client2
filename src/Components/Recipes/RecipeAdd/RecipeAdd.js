@@ -39,7 +39,6 @@ export default class RecipeAdd extends React.Component {
     
 
     this.setState({ error: null });
-    // let recipeIngredients = ingredients.value.split(', ');
 
     Recipe.createRecipe({
       title: title,
@@ -69,13 +68,13 @@ export default class RecipeAdd extends React.Component {
     return (
 
       <div className="Creation">
-        <header className="Creation-Header" id="add-recipe-header">
-          <h2>New Recipe</h2>
+        <header className="Creation-Header" id="add-recipe-header" aria-label="create new recipe">
+          <h2>New Recipe: </h2>
         </header>
         <form className="Creation-Form" onSubmit={this.createSubmit}>
           {error && <p className="empty-fields-error-message">Fields cannot be empty. Please try again.</p>}
 
-          <label className="field a-field a-field_a2">
+          <label className="field a-field a-field_a2" aria-label="recipe title">
             Title: 
             <input
               className="field__input a-field__input"
@@ -85,7 +84,7 @@ export default class RecipeAdd extends React.Component {
             />
             <span className="a-field__label-wrap"><span className="a-field__label"></span></span>
           </label>
-          <label className="field a-field a-field_a2">
+          <label className="field a-field a-field_a2" aria-label="recipe ingredients">
             Ingredients: <div className="inputParam">(separate by commas)</div>
             <input
               className="field__input a-field__input"
@@ -99,7 +98,7 @@ export default class RecipeAdd extends React.Component {
               <span className="a-field__label"></span>
             </span>
           </label>
-          <label className="field a-field a-field_a2">
+          <label className="field a-field a-field_a2" aria-label="recipe instructions">
             Instructions: <div className="inputParam">(separate by period)</div> <textarea
               className="field__input a-field__input instructionsField"
               required
@@ -117,14 +116,14 @@ export default class RecipeAdd extends React.Component {
             <br></br>
             <select className="dropDown" name="meal_type" onChange={this.handleChange} value={this.state.meal_type}>
               <option value></option>
-              <option value="breakfast">Breakfast</option>
-              <option value="lunch">Lunch</option>
-              <option value="dinner">Dinner</option>
-              <option value="dessert">Dessert</option>
-              <option value="snack">Snack</option>
-              <option value="Breads and Crackers">Breads and Crackers</option>
-              <option value="Side Dish">Side Dish</option>
-              <option value="fat-bombs">Fat Bombs</option>
+              <option value="Breakfast" aria-label="Breakfast">Breakfast</option>
+              <option value="Lunch" aria-label="Lunch">Lunch</option>
+              <option value="Dinner" aria-label="Dinner">Dinner</option>
+              <option value="Dessert" aria-label="Dessert">Dessert</option>
+              <option value="Snack" aria-label="Snack">Snack</option>
+              <option value="Breads and Crackers" aria-label="Breads and Crackers">Breads and Crackers</option>
+              <option value="Side Dish" aria-label="Side Dish">Side Dish</option>
+              <option value="fat-bombs" aria-label="Fat Bombs">Fat Bombs</option>
             </select>
           </label>
         
@@ -134,31 +133,33 @@ export default class RecipeAdd extends React.Component {
             <br></br>
             <select className="dropDown" name="cuisine_type" onChange={this.handleChange} value={this.state.cuisine_type}>            
                 <option value></option>
-                <option value="Universal">Universal</option>
-                <option value="American">American</option>
-                <option value="Chinese">Chinese</option>
-                <option value="French">French</option>
-                <option value="German">German</option>
-                <option value="Greek">Greek</option>
-                <option value="Indian">Indian</option>
-                <option value="Irish">Irish</option>
-                <option value="Italian">Italian</option>
-                <option value="Japanese">Japanese</option>                        
-                <option value="Korean">Korean</option>
-                <option value="Mexican">Mexican</option>
-                <option value="Middle Eastern">Middle Eastern</option>
-                <option value="Russian">Russian</option>                        
-                <option value="Spanish">Spanish</option>               
-                <option value="Thai">Thai</option>
-                <option value="Vietnamese">Vietnamese</option>   
+                <option value="Universal" aria-label="Univeral">Universal</option>
+                <option value="American" aria-label="American">American</option>
+                <option value="Chinese" aria-label="Chinese">Chinese</option>
+                <option value="French" aria-label="French">French</option>
+                <option value="German" aria-label="German">German</option>
+                <option value="Greek" aria-label="Greek">Greek</option>
+                <option value="Indian" aria-label="Indian">Indian</option>
+                <option value="Irish" aria-label="Irish">Irish</option>
+                <option value="Italian" aria-label="Italian">Italian</option>
+                <option value="Japanese" aria-label="Japanese">Japanese</option>                        
+                <option value="Korean" aria-label="Korean">Korean</option>
+                <option value="Mexican" aria-label="Mexican">Mexican</option>
+                <option value="Middle Eastern" aria-label="Middle Eastern">Middle Eastern</option>
+                <option value="Russian" aria-label="Russian">Russian</option>                        
+                <option value="Spanish" aria-label="Spanish">Spanish</option>               
+                <option value="Thai" aria-label="Thai">Thai</option>
+                <option value="Vietnamese" aria-label="Vietnamese">Vietnamese</option>   
             </select>
           </label>
           <div className="btn-row">
+            {/* <Link to="/recipes"> */}
             <div>
-              <button className="medButton" type="submit">Create It!</button>
+              <button className="medButton" type="submit" aria-label="Create it">Create It!</button>
             </div>
+            {/* </Link> */}
             <Link to="/recipes">
-              <button className="medButton">Back</button>
+              <button className="medButton" aria-label="back">Back</button>
             </Link>
           </div>
           </div> 

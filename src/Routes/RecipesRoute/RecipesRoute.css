@@ -30,7 +30,6 @@
 #recipeHeader {
     text-align: center;
     font-size: 32px;
-    font-family: 'cookiesregular';
 }
 
 #recipe-search-text {
@@ -65,3 +64,20 @@
 /* .recipeResults {
     text-align: center;
 } */
+@media screen and (min-width: 720px) {
+    .bigButton {
+        text-align: center;
+        color: white;
+        background-color: rgb(219, 5, 5);
+        padding: 10px;
+        margin: 10px;
+        font-size: 50px;
+        width: 25%;
+        height: 200px;
+        border-radius: 25%;
+    }
+
+    .recipeRouteComment {
+        font-size: 25px;
+    }
+} 

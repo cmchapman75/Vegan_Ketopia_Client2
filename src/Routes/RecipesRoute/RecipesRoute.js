@@ -74,7 +74,7 @@ class RecipesRoute extends Component {
         <Link to="recipes/create">
           <button className="bigButton">Create It!</button>
         </Link>
-        {this.state.recipes.length === 0 ? <><p id="no-recipes-in-list">No recipes are saved yet.</p> <p>Search and find your new favorite recipe or create one.</p></> : <h1 id="recipeHeader">My Recipes:</h1>}
+        {this.state.recipes.length === 0 ? <><p className="recipeRouteComment" id="no-recipes-in-list">No recipes are saved yet.</p> <p>Search and find your new favorite recipe or create one.</p></> : <h1 id="recipeHeader">My Recipes:</h1>}
         {this.state.recipes && this.renderRecipes()}
       </section>
     );

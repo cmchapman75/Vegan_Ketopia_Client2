@@ -8,52 +8,62 @@ exports[`renders the UI as expected 1`] = `
     className="FilterOptions__option"
   >
     <label
+      aria-label="meal type"
       htmlFor="filter_recipeType"
     >
-      Recipe Type:
+      Meal Type:
+      <br />
       <select
-        className="recipeTypeFilter"
+        className="dropDown"
         onChange={[Function]}
       >
         <option
-          value={true}
+          value="all"
         />
         <option
-          value="breakfast"
+          aria-label="Breakfast"
+          value="Breakfast"
         >
           Breakfast
         </option>
         <option
-          value="lunch"
+          aria-label="Lunch"
+          value="Lunch"
         >
           Lunch
         </option>
         <option
-          value="dinner"
+          aria-label="Dinner"
+          value="Dinner"
         >
           Dinner
         </option>
         <option
-          value="dessert"
+          aria-label="Dessert"
+          value="Dessert"
         >
           Dessert
         </option>
         <option
-          value="snack"
+          aria-label="Snack"
+          value="Snack"
         >
           Snack
         </option>
         <option
+          aria-label="Breads and Crackers"
           value="Breads and Crackers"
         >
           Breads and Crackers
         </option>
         <option
+          aria-label="Side Dish"
           value="Side Dish"
         >
           Side Dish
         </option>
         <option
+          aria-label="Fat Bombs"
           value="fat-bombs"
         >
           Fat Bombs
@@ -65,97 +75,116 @@ exports[`renders the UI as expected 1`] = `
     className="FilterOptions__option"
   >
     <label
+      aria-label="cuisine type"
       htmlFor="filter_cuisine_type"
     >
       Cuisine Type:
+      <br />
       <select
-        className="cuisine_typeFilter"
+        className="dropDown"
         onChange={[Function]}
       >
         <option
-          value={true}
+          value="all"
         />
         <option
+          aria-label="Univeral"
           value="Universal"
         >
           Universal
         </option>
         <option
+          aria-label="American"
           value="American"
         >
           American
         </option>
         <option
+          aria-label="Chinese"
           value="Chinese"
         >
           Chinese
         </option>
         <option
+          aria-label="French"
           value="French"
         >
           French
         </option>
         <option
+          aria-label="German"
           value="German"
         >
           German
         </option>
         <option
+          aria-label="Greek"
           value="Greek"
         >
           Greek
         </option>
         <option
+          aria-label="Indian"
           value="Indian"
         >
           Indian
         </option>
         <option
+          aria-label="Irish"
           value="Irish"
         >
           Irish
         </option>
         <option
+          aria-label="Italian"
           value="Italian"
         >
           Italian
         </option>
         <option
+          aria-label="Japanese"
           value="Japanese"
         >
           Japanese
         </option>
         <option
+          aria-label="Korean"
           value="Korean"
         >
           Korean
         </option>
         <option
+          aria-label="Mexican"
           value="Mexican"
         >
           Mexican
         </option>
         <option
+          aria-label="Middle Eastern"
           value="Middle Eastern"
         >
           Middle Eastern
         </option>
         <option
+          aria-label="Russian"
           value="Russian"
         >
           Russian
         </option>
         <option
+          aria-label="Spanish"
           value="Spanish"
         >
           Spanish
         </option>
         <option
+          aria-label="Thai"
           value="Thai"
         >
           Thai
         </option>
         <option
+          aria-label="Vietnamese"
           value="Vietnamese"
         >
           Vietnamese
